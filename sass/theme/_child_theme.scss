@@ -1,0 +1,87 @@
+li.menu-bforbank,
+li.menu-boursorama,
+li.menu-fortuneo,
+li.menu-hellobank,
+li.menu-ingdirect,
+li.menu-monabanq {
+  padding-left: 37px;
+}
+li.menu-bforbank {
+    background-image: url('#{$images-path}/32x32/bforbank.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    background-position-y: center;
+}
+
+li.menu-boursorama {
+    background-image: url('#{$images-path}/32x32/boursorama.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    background-position-y: center;
+}
+
+li.menu-fortuneo {
+  background-image: url('#{$images-path}/32x32/fortuneo.png');
+  background-repeat: no-repeat;
+  background-position: 5px;
+  background-position-y: center;
+}
+
+li.menu-hellobank {
+  background-image: url('#{$images-path}/32x32/hellobank.png');
+  background-repeat: no-repeat;
+  background-position: 5px;
+  background-position-y: center;
+}
+
+li.menu-ingdirect {
+  background-image: url('#{$images-path}/32x32/ingdirect.png');
+  background-repeat: no-repeat;
+  background-position: 5px;
+  background-position-y: center;
+}
+li.menu-monabanq {
+  background-image: url('#{$images-path}/32x32/monabanq.png');
+  background-repeat: no-repeat;
+  background-position: 5px;
+  background-position-y: center;
+}
+div.ranking-widget dl, div.ranking-widget dt {
+  margin-bottom: 0.2rem;
+}
+div.ranking-widget dl, div.ranking-widget div.pb-4.mb-2, div.ranking-widget div.card-header {
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+[v-cloak] {
+  display: none;
+}
+ul.rating-green {
+  color: #5cb85c;text-align:center;
+}
+ul.rating {
+  color: #ffa000;text-align:center;
+}
+
+div.card-ranking {
+    background-color: $brand-bg;
+}
+.widget-title , .footer-wrapper .bn-title {
+    border-bottom: 1px solid $brand-secondary;
+    position: relative;
+    margin-bottom: 15px;
+    padding: 12px 0;
+    text-transform: uppercase;
+    &:before {
+       	bottom: 0;
+    	content: '';
+    	display: inline-block;
+    	left: 0;
+    	position: absolute;
+    	text-transform: uppercase;
+    	width: 40%;
+        border-bottom: 7px solid $brand-secondary;
+    }
+}
+
+.breadcrumbs { @extend .breadcrumb }
+

@@ -15,7 +15,7 @@ var browserSyncWatchFiles = [
 // browser-sync options
 // see: https://www.browsersync.io/docs/options/
 var browserSyncOptions = {
-    proxy: "localhost/understrap/",
+    proxy: "localhost:8080/topbanque/",
     notify: false
 };
 
@@ -149,7 +149,10 @@ gulp.task('scripts', function() {
 
         // End - All BS4 stuff
 
-        basePaths.dev + 'js/skip-link-focus-fix.js'
+        basePaths.dev + 'js/skip-link-focus-fix.js',
+
+        // Custom script
+        basePaths.dev + 'js/main.js'
     ];
   gulp.src(scripts)
     .pipe(concat('child-theme.min.js'))
@@ -195,6 +198,11 @@ gulp.task('copy-assets', function() {
 // Copy all Font Awesome SCSS files
     gulp.src(basePaths.node + 'font-awesome/scss/*.scss')
         .pipe(gulp.dest(basePaths.dev + '/sass/fontawesome'));
+
+// Copy all Roboto Fonts
+    gulp.src(basePaths.node + 'roboto-fontface/fonts/**/*.{ttf,woff,woff2,eof,svg}')
+        .pipe(gulp.dest('./fonts'));
+
 
 // Copy jQuery
     gulp.src(basePaths.node + 'jquery/dist/*.js')

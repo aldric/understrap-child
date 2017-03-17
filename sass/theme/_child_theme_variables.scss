@@ -6,7 +6,13 @@
 // Just add your color code here, compile the theme.scss file to change this color everywhere
 
 
-$brand-primary:         #fece00; //#ff6d5a
+$brand-primary:       #2d2d2d; // #fece00;#ff6d5a
+$brand-secondary:       #f13600;
+$brand-bg:       #f2f2f2;
+//$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-color: #FF0000;
+
+$images-path: "../images/";
 
 // Basics of a navbar
 $navbar-height:                    60px;
