@@ -5485,7 +5485,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .mr-2 {
   margin-right: 0.5rem !important; }
 
-.mb-2 {
+.mb-2, div.widget-area aside {
   margin-bottom: 0.5rem !important; }
 
 .ml-2 {
@@ -9284,6 +9284,9 @@ div.card-ranking {
     text-transform: uppercase;
     width: 40%;
     border-bottom: 7px solid #f13600; }
+
+div.widget-custom ul {
+  padding-left: 1rem; }
 
 /*!
  * Material Design for Bootstrap 4
@@ -14487,7 +14490,7 @@ blockquote p {
 .mb-1 {
   margin-bottom: 1rem !important; }
 
-.mb-2 {
+.mb-2, div.widget-area aside {
   margin-bottom: 2rem !important; }
 
 .mb-3 {

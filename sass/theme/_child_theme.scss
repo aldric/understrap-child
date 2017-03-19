@@ -85,3 +85,8 @@ div.card-ranking {
 
 .breadcrumbs { @extend .breadcrumb }
 
+div.widget-area aside { @extend .mb-2}
+
+div.widget-custom ul {
+    padding-left: 1rem;
+}
