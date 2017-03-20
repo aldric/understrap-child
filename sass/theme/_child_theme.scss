@@ -91,11 +91,14 @@ div.widget-custom ul {
     padding-left: 1rem;
 }
 
-.navbar .dropdown-menu .dropdown-menu a.nav-link:hover { 
-    background-color:  transparent; 
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    background-color:  transparent;
      color : $link-hover-color;
-     }
-
+}
+.dropdown-menu .menu-item a.nav-link:hover  {
+  background-color:  transparent;
+   color : $link-hover-color;
+}
 div.widget-catalogue li a.active {
     text-transform: uppercase;
     color : $link-hover-color;
@@ -106,4 +109,12 @@ div.widget-catalogue li a.active {
         margin-right: 5px;
       	content: '\f124';
       }
+}
+button span.truncate {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    color: #2d2d2d;
 }
