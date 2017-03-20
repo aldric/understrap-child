@@ -57,3 +57,33 @@ add_filter( 'bcn_li_attributes', 'filter_bcn_li_attributes', 10, 3 );
 // {
 //   //  print_r($breadcrumb_trail);
 // }
+
+    function understrap_post_nav()
+    {
+        // Don't print empty markup if there's nowhere to navigate.
+        $previous = (is_attachment()) ? get_post(get_post()->post_parent) : get_adjacent_post(false, '', true);
+        $next     = get_adjacent_post(false, '', false);
+
+        if (! $next && ! $previous) {
+            return;
+        } ?>
+
+		<div class="row">
+			<div class="col-md-12">
+				<nav class="navigation post-navigation">
+					<h2 class="sr-only"><?php _e('Post navigation', 'understrap'); ?></h2>
+					<div class="nav-links clearfix">
+					<?php
+              if (get_previous_post_link()) {
+                  previous_post_link('<span class="nav-previous float-xs-left float-left">%link</span>', _x('<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap'));
+              }
+        if (get_next_post_link()) {
+            next_post_link('<span class="nav-next float-xs-right float-right">%link</span>', _x('%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap'));
+        } ?>
+					</div><!-- .nav-links -->
+				</nav><!-- .navigation -->
+			</div>
+		</div>
+		<?php
+
+    }

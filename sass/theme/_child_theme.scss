@@ -90,3 +90,20 @@ div.widget-area aside { @extend .mb-2}
 div.widget-custom ul {
     padding-left: 1rem;
 }
+
+.navbar .dropdown-menu .dropdown-menu a.nav-link:hover { 
+    background-color:  transparent; 
+     color : $link-hover-color;
+     }
+
+div.widget-catalogue li a.active {
+    text-transform: uppercase;
+    color : $link-hover-color;
+    cursor: inherit;
+      &:before {
+        font-family: FontAwesome;
+        font-weight: 600;
+        margin-right: 5px;
+      	content: '\f124';
+      }
+}
