@@ -6845,8 +6845,7 @@ a.skip-link {
     margin: 0px;
     padding: 0.5em 1em; }
   .dropdown-menu .menu-item a.nav-link:hover {
-    /* background-color: $brand-primary; */
-    color: #f13600; }
+    background-color: #2d2d2d; }
 
 button,
 [type="button"],
@@ -16165,7 +16164,11 @@ div.card-ranking {
 div.widget-custom ul {
   padding-left: 1rem; }
 
-.navbar .dropdown-menu .dropdown-menu a.nav-link:hover {
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  background-color: transparent;
+  color: #f13600; }
+
+.dropdown-menu .menu-item a.nav-link:hover {
   background-color: transparent;
   color: #f13600; }
 
@@ -16178,3 +16181,11 @@ div.widget-catalogue li a.active {
     font-weight: 600;
     margin-right: 5px;
     content: '\f124'; }
+
+button span.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  color: #2d2d2d; }
