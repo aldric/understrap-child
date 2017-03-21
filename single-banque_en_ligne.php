@@ -13,9 +13,10 @@ $sidebar_pos = get_theme_mod('understrap_sidebar_position');
 <div class="wrapper" id="single-wrapper">
 
 	<div class="<?php echo esc_html($container); ?>" id="content" tabindex="-1">
-		<?php if (is_active_sidebar('AGT : Top banner')) {
-    dynamic_sidebar('AGT : Top banner');
-} ?>
+		<?php if (is_active_sidebar('sidebar-top-bank-banner')) {
+   			 dynamic_sidebar('sidebar-top-bank-banner');
+		}
+	 ?>
 
 		<div class="row">
 

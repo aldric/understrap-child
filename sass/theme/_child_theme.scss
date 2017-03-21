@@ -64,6 +64,9 @@ ul.rating {
 
 div.card-ranking {
     background-color: $brand-bg;
+    >.card-block {
+      padding: 0.75rem;
+    }
 }
 .widget-title , .footer-wrapper .bn-title {
     border-bottom: 1px solid $brand-secondary;
@@ -82,8 +85,6 @@ div.card-ranking {
         border-bottom: 7px solid $brand-secondary;
     }
 }
-
-.breadcrumbs { @extend .breadcrumb }
 
 div.widget-area aside { @extend .mb-2}
 

@@ -77,9 +77,27 @@ $container = get_theme_mod('understrap_container_type');
                     )
                 ); ?>
 			<!--<?php if ('container' == $container) : ?>-->
+			 <form class="form-inline waves-effect waves-light">
+                <input class="form-control" type="text" placeholder="Search">
+            </form>
 			</div><!-- .container -->
 			<!--<?php endif; ?>-->
-
 		</nav><!-- .site-navigation -->
 
 	</div><!-- .wrapper-navbar end -->
+		
+		<!-- breadcrumbs widget location -->
+		<?php if (is_active_sidebar('sidebar-top-bank-breadcrumbs')) : ?>
+   			 <div class="container-fluid">
+				<div class="row">
+					<div class="col">
+						<?php dynamic_sidebar('sidebar-top-bank-breadcrumbs'); ?>
+					</div>
+				</div>
+  			</div>
+		<!--<?php endif; ?>-->
+		<!-- end breadcrumbs -->
+	
+		
+
+	
