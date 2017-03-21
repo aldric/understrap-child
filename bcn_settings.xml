@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<options>
+  <plugin name="Breadcrumb NavXT" version="5.6.0">
+    <option name="bmainsite_display"/>
+    <option name="Hmainsite_template">&lt;span property="itemListElement" typeof="ListItem"&gt;&lt;a property="item" typeof="WebPage" title="Go to %title%." href="%link%" class="%type%"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;/a&gt;&lt;meta property="position" content="%position%"&gt;&lt;/span&gt;</option>
+    <option name="Hmainsite_template_no_anchor">&lt;span property="itemListElement" typeof="ListItem"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;meta property="position" content="%position%"&gt;&lt;/span&gt;</option>
+    <option name="bhome_display">1</option>
+    <option name="Hhome_template">&lt;a title="Visiter : %title%." href="%link%" class="%type% breadcrumb-item"&gt;&lt;i class="fa fa-university"&gt;&lt;/i&gt;  &lt;meta content="%htitle%"&gt;&lt;/meta&gt;&lt;/a&gt;</option>
+    <option name="Hhome_template_no_anchor">&lt;span class="breadcrumb-item active"&gt;&lt;i class="fa fa-university"&gt;&lt;/i&gt;&lt;meta content="%htitle%"&gt;&lt;/meta&gt;&lt;/span&gt;</option>
+    <option name="bblog_display"/>
+    <option name="Hblog_template">&lt;span property="itemListElement" typeof="ListItem"&gt;&lt;a property="item" typeof="WebPage" title="Go to %title%." href="%link%" class="%type%"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;/a&gt;&lt;meta property="position" content="%position%"&gt;&lt;/span&gt;</option>
+    <option name="Hblog_template_no_anchor">&lt;span property="itemListElement" typeof="ListItem"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;meta property="position" content="%position%"&gt;&lt;/span&gt;</option>
+    <option name="hseparator"/>
+    <option name="blimit_title"/>
+    <option name="amax_title_length">20</option>
+    <option name="bcurrent_item_linked"/>
+    <option name="Hpost_page_template">&lt;a title="Visiter : %title%." href="%link%" class="%type% breadcrumb-item"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;/a&gt;</option>
+    <option name="Hpost_page_template_no_anchor">&lt;span class="breadcrumb-item active"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;/span&gt;</option>
+    <option name="apost_page_root">0</option>
+    <option name="Hpaged_template">&lt;span&gt;&lt;span property="name"&gt;Page %htitle%&lt;/span&gt;&lt;meta property="position" content="%position%"&gt;&lt;/span&gt;</option>
+    <option name="bpaged_display"/>
+    <option name="Hpost_post_template">&lt;a property="item" title="Aller vers %title%." href="%link%" class="breadcrumb-item"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;/a&gt;</option>
+    <option name="Hpost_post_template_no_anchor">&lt;span class="breadcrumb-item active"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;/span&gt;</option>
+    <option name="apost_post_root">0</option>
+    <option name="bpost_post_taxonomy_display">1</option>
+    <option name="bpost_post_taxonomy_referer"/>
+    <option name="Spost_post_taxonomy_type">category</option>
+    <option name="Hpost_attachment_template">&lt;a title="Visiter : %title%." href="%link%" class="%type% breadcrumb-item"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;/a&gt;</option>
+    <option name="Hpost_attachment_template_no_anchor">&lt;span&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;/span&gt;</option>
+    <option name="H404_template">&lt;span class="breadcrumb-item active"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;/span&gt;</option>
+    <option name="S404_title">404</option>
+    <option name="Hsearch_template">&lt;a title="Visiter : %title%." href="%link%" class="%type% breadcrumb-item"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;/a&gt;</option>
+    <option name="Hsearch_template_no_anchor">&lt;span class="breadcrumb-item active"&gt;&lt;span property="name"&gt;R&amp;eacute;sultat(s) pour : %htitle%&lt;/span&gt;&lt;/span&gt;</option>
+    <option name="Htax_post_tag_template">&lt;span property="itemListElement" typeof="ListItem"&gt;&lt;a property="item" typeof="WebPage" title="Go to the %title% tag archives." href="%link%" class="%type%"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;/a&gt;&lt;meta property="position" content="%position%"&gt;&lt;/span&gt;</option>
+    <option name="Htax_post_tag_template_no_anchor">&lt;span property="itemListElement" typeof="ListItem"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;meta property="position" content="%position%"&gt;&lt;/span&gt;</option>
+    <option name="Htax_post_format_template">&lt;span property="itemListElement" typeof="ListItem"&gt;&lt;a property="item" typeof="WebPage" title="Go to the %title% archives." href="%link%" class="%type%"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;/a&gt;&lt;meta property="position" content="%position%"&gt;&lt;/span&gt;</option>
+    <option name="Htax_post_format_template_no_anchor">&lt;span property="itemListElement" typeof="ListItem"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;meta property="position" content="%position%"&gt;&lt;/span&gt;</option>
+    <option name="Hauthor_template">&lt;span property="itemListElement" typeof="ListItem"&gt;&lt;span property="name"&gt;Articles by: &lt;a title="Go to the first page of posts by %title%." href="%link%" class="%type%"&gt;%htitle%&lt;/a&gt;</option>
+    <option name="Hauthor_template_no_anchor">&lt;span property="itemListElement" typeof="ListItem"&gt;&lt;span property="name"&gt;Articles by: %htitle%&lt;/span&gt;&lt;meta property="position" content="%position%"&gt;&lt;/span&gt;</option>
+    <option name="Sauthor_name">display_name</option>
+    <option name="Htax_category_template">&lt;span property="itemListElement" typeof="ListItem"&gt;&lt;a property="item" typeof="WebPage" title="Go to the %title% category archives." href="%link%" class="%type%"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;/a&gt;&lt;meta property="position" content="%position%"&gt;&lt;/span&gt;</option>
+    <option name="Htax_category_template_no_anchor">&lt;span property="itemListElement" typeof="ListItem"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;meta property="position" content="%position%"&gt;&lt;/span&gt;</option>
+    <option name="Hdate_template">&lt;span property="itemListElement" typeof="ListItem"&gt;&lt;a property="item" typeof="WebPage" title="Go to the %title% archives." href="%link%" class="%type%"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;/a&gt;&lt;meta property="position" content="%position%"&gt;&lt;/span&gt;</option>
+    <option name="Hdate_template_no_anchor">&lt;span property="itemListElement" typeof="ListItem"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;meta property="position" content="%position%"&gt;&lt;/span&gt;</option>
+    <option name="bpost_acf-field-group_taxonomy_referer"/>
+    <option name="Hpost_acf-field-group_template">&lt;span property="itemListElement" typeof="ListItem"&gt;&lt;a property="item" typeof="WebPage" title="Go to %title%." href="%link%" class="%type%"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;/a&gt;&lt;meta property="position" content="%position%"&gt;&lt;/span&gt;</option>
+    <option name="Hpost_acf-field-group_template_no_anchor">&lt;span property="itemListElement" typeof="ListItem"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;meta property="position" content="%position%"&gt;&lt;/span&gt;</option>
+    <option name="bpost_acf-field-group_archive_display"/>
+    <option name="apost_acf-field-group_root">0</option>
+    <option name="bpost_acf-field-group_taxonomy_display"/>
+    <option name="Spost_acf-field-group_taxonomy_type">BCN_DATE</option>
+    <option name="bpost_acf-field_taxonomy_referer"/>
+    <option name="Hpost_acf-field_template">&lt;span property="itemListElement" typeof="ListItem"&gt;&lt;a property="item" typeof="WebPage" title="Go to %title%." href="%link%" class="%type%"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;/a&gt;&lt;meta property="position" content="%position%"&gt;&lt;/span&gt;</option>
+    <option name="Hpost_acf-field_template_no_anchor">&lt;span property="itemListElement" typeof="ListItem"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;meta property="position" content="%position%"&gt;&lt;/span&gt;</option>
+    <option name="bpost_acf-field_archive_display"/>
+    <option name="apost_acf-field_root">0</option>
+    <option name="bpost_acf-field_taxonomy_display"/>
+    <option name="Spost_acf-field_taxonomy_type">BCN_DATE</option>
+    <option name="bpost_wpcf7_contact_form_taxonomy_referer"/>
+    <option name="Hpost_wpcf7_contact_form_template">&lt;span property="itemListElement" typeof="ListItem"&gt;&lt;a property="item" typeof="WebPage" title="Go to %title%." href="%link%" class="%type%"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;/a&gt;&lt;meta property="position" content="%position%"&gt;&lt;/span&gt;</option>
+    <option name="Hpost_wpcf7_contact_form_template_no_anchor">&lt;span property="itemListElement" typeof="ListItem"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;meta property="position" content="%position%"&gt;&lt;/span&gt;</option>
+    <option name="bpost_wpcf7_contact_form_archive_display"/>
+    <option name="apost_wpcf7_contact_form_root">0</option>
+    <option name="bpost_wpcf7_contact_form_taxonomy_display"/>
+    <option name="Spost_wpcf7_contact_form_taxonomy_type">BCN_DATE</option>
+    <option name="bpost_banque_en_ligne_taxonomy_referer"/>
+    <option name="Hpost_banque_en_ligne_template">&lt;a title="Visiter : %title%." href="%link%" class="%type% breadcrumb-item"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;/a&gt;</option>
+    <option name="Hpost_banque_en_ligne_template_no_anchor">&lt;span class="breadcrumb-item active"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;/span&gt;</option>
+    <option name="bpost_banque_en_ligne_archive_display">1</option>
+    <option name="apost_banque_en_ligne_root">0</option>
+    <option name="bpost_banque_en_ligne_taxonomy_display">1</option>
+    <option name="Spost_banque_en_ligne_taxonomy_type">BCN_POST_PARENT</option>
+    <option name="bpost_fiche_banque_taxonomy_referer"/>
+    <option name="Hpost_fiche_banque_template">&lt;a title="Go to %title%." href="%link%" class="%type% breadcrumb-item "&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;/a&gt;</option>
+    <option name="Hpost_fiche_banque_template_no_anchor">&lt;span class="breadcrumb-item active"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;/span&gt;</option>
+    <option name="bpost_fiche_banque_archive_display"/>
+    <option name="apost_fiche_banque_root">0</option>
+    <option name="bpost_fiche_banque_taxonomy_display"/>
+    <option name="Spost_fiche_banque_taxonomy_type">BCN_DATE</option>
+    <option name="bpost_wysijap_taxonomy_referer"/>
+    <option name="Hpost_wysijap_template">&lt;span property="itemListElement" typeof="ListItem"&gt;&lt;a property="item" typeof="WebPage" title="Go to %title%." href="%link%" class="%type%"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;/a&gt;&lt;meta property="position" content="%position%"&gt;&lt;/span&gt;</option>
+    <option name="Hpost_wysijap_template_no_anchor">&lt;span property="itemListElement" typeof="ListItem"&gt;&lt;span property="name"&gt;%htitle%&lt;/span&gt;&lt;meta property="position" content="%position%"&gt;&lt;/span&gt;</option>
+    <option name="bpost_wysijap_archive_display"/>
+    <option name="apost_wysijap_root">0</option>
+    <option name="bpost_wysijap_taxonomy_display"/>
+    <option name="Spost_wysijap_taxonomy_type">BCN_DATE</option>
+  </plugin>
+</options>
