@@ -52,7 +52,25 @@ function understrap_post_nav()
     <?php
 
 }
+
+function all_excerpts_get_more_link( $post_excerpt ) {
+    return $post_excerpt . ' [...]<p><a class="btn btn-success understrap-read-more-link" href="' . get_permalink( get_the_ID() ) . '">' . __( 'En savoir plus ...',
+    'understrap' ) . '</a></p>';
+}
+
+add_filter( 'wp_nav_menu', 'add_search_box_to_main_menu', 10, 2 );
+function add_search_box_to_main_menu ( $nav_menu, $args ) {
+   //echo esc_html($nav_menu);
+    $search_form = '<form class="form-inline" action="'.home_url( '/' ).'" role="search"><input class="form-control" type="text" id="s" name="s" placeholder="Rechercher" style="width:100%"></form>';
+    if ($args->theme_location == 'primary') {
+     
     
+           //echo 'plop '.$count;
+          //echo esc_html($nav_menu);
+    }
+    return str_replace('</div>', $search_form.'</div>', $nav_menu, $count);
+}
+
   register_sidebar(array(
       'name' => 'AGT : Top breadcrumbs',
       'id' => 'sidebar-top-bank-breadcrumbs',
@@ -75,3 +93,8 @@ function understrap_post_nav()
  
 //BEL :: <a title="Visiter : %title%." href="%link%" class="%type% breadcrumb-item" content="%position%"><span property="name">%htitle%</span></a>
 //BEL U :: <span class="breadcrumb-item active" content="%position%"><span property="name">%htitle%</span></span>
+//CSS class to add to the menu : menu-bforbank dropdown-item
+
+// $s_form = get_search_form(false);
+// print_r($s_form);
+

@@ -4,6 +4,7 @@ li.menu-fortuneo,
 li.menu-hellobank,
 li.menu-ingdirect,
 li.menu-monabanq {
+  @extend .dropdown-item;
   padding-left: 37px;
 }
 li.menu-bforbank {

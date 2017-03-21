@@ -35,10 +35,6 @@ $container = get_theme_mod('understrap_container_type');
 
 		<nav class="navbar navbar-toggleable-md  navbar-light  sticky-top">
 
-		<!--<?php if ('container' == $container) : ?>
-			<div class="container">
-		<?php endif; ?>-->
-
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -63,31 +59,25 @@ $container = get_theme_mod('understrap_container_type');
         } else {
             the_custom_logo();
         } ?><!-- end custom logo -->
-
 				<!-- The WordPress Menu goes here -->
 				<?php wp_nav_menu(
                     array(
                         'theme_location'  => 'primary',
                         'container_class' => 'collapse navbar-collapse',
                         'container_id'    => 'navbarNavDropdown',
-                        'menu_class'      => 'navbar-nav',
+                        'menu_class'      => 'navbar-nav mr-auto',
                         'fallback_cb'     => '',
                         'menu_id'         => 'main-menu',
                         'walker'          => new WP_Bootstrap_Navwalker(),
                     )
                 ); ?>
-			<!--<?php if ('container' == $container) : ?>-->
-			 <form class="form-inline waves-effect waves-light">
-                <input class="form-control" type="text" placeholder="Search">
-            </form>
-			</div><!-- .container -->
-			<!--<?php endif; ?>-->
+	
 		</nav><!-- .site-navigation -->
-
 	</div><!-- .wrapper-navbar end -->
-		
 		<!-- breadcrumbs widget location -->
-		<?php if (is_active_sidebar('sidebar-top-bank-breadcrumbs')) : ?>
+		<?php 
+		//echo 'plop'. get_page_template_slug();
+		if (is_active_sidebar('sidebar-top-bank-breadcrumbs')) : ?>
    			 <div class="container-fluid">
 				<div class="row">
 					<div class="col">

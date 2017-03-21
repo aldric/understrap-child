@@ -5391,14 +5391,20 @@ var BreadcrumbGenerator = function() {
 		var idx = 0;
 		jQuery('nav.breadcrumb a.breadcrumb-item').each(function( index ) {
 				idx = index + 1;
+				var text = idx == 1 ? jQuery(this).find("meta").prop("content") : jQuery(this).text();
+				text = text.charAt(0).toUpperCase() + text.slice(1);
+				
 				breadCrumb.itemListElement.push(
-					self.getItem(idx, jQuery(this).attr("href"), jQuery(this).text())
+					self.getItem(idx, jQuery(this).attr("href"), text)
 				);
 				
 			});
 		jQuery('nav.breadcrumb span.breadcrumb-item.active').each(function(index) {
+				var text = jQuery(this).find('span[property=name]').text();
+				if(text === '')
+					text = jQuery(this).find("meta").prop("content");
 				breadCrumb.itemListElement.push(
-					self.getItem(idx + index + 1, window.location.href, jQuery(this).find('span[property=name]').text())
+					self.getItem(idx + index + 1, window.location.href, text)
 				);
 			});
 		return JSON.stringify(breadCrumb);
