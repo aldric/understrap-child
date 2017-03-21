@@ -30,8 +30,7 @@ $container = get_theme_mod('understrap_container_type');
 	<!-- ******************* The Navbar Area ******************* -->
 	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
 
-		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e('Skip to content',
-        'understrap'); ?></a>
+		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e('Skip to content', 'understrap'); ?></a>
 
 		<nav class="navbar navbar-toggleable-md  navbar-light  sticky-top">
 
@@ -41,7 +40,7 @@ $container = get_theme_mod('understrap_container_type');
 
 					<!-- Your site title as branding in the menu -->
 					<?php if (! has_custom_logo()) {
-            ?>
+    ?>
 
 						<?php if (is_front_page() && is_home()) : ?>
 
@@ -56,9 +55,9 @@ $container = get_theme_mod('understrap_container_type');
 
 					<?php
 
-        } else {
-            the_custom_logo();
-        } ?><!-- end custom logo -->
+} else {
+    the_custom_logo();
+} ?><!-- end custom logo -->
 				<!-- The WordPress Menu goes here -->
 				<?php wp_nav_menu(
                     array(
@@ -71,23 +70,32 @@ $container = get_theme_mod('understrap_container_type');
                         'walker'          => new WP_Bootstrap_Navwalker(),
                     )
                 ); ?>
-	
+
 		</nav><!-- .site-navigation -->
 	</div><!-- .wrapper-navbar end -->
 		<!-- breadcrumbs widget location -->
-		<?php 
-		//echo 'plop'. get_page_template_slug();
-		if (is_active_sidebar('sidebar-top-bank-breadcrumbs')) : ?>
-   			 <div class="container-fluid">
-				<div class="row">
-					<div class="col">
+		<?php
+        //echo 'plop'. get_page_template_slug();
+        if (is_active_sidebar('sidebar-top-bank-breadcrumbs')) : ?>
+   			<div class="wrapper wrapper-navbar" id="wrapper-breadcrumbs">
 						<?php dynamic_sidebar('sidebar-top-bank-breadcrumbs'); ?>
-					</div>
-				</div>
   			</div>
-		<!--<?php endif; ?>-->
+		<?php endif; ?>
 		<!-- end breadcrumbs -->
-	
-		
-
-	
+		<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+        <a class="btn-floating btn-large link-hover-color waves-effect" href="#page">
+          <i class="fa fa-angle-double-up"></i>
+        </a>
+			</div>
+<!--
+var $root = $('html, body');
+$('a').click(function() {
+    var href = $.attr(this, 'href');
+    $root.animate({
+        scrollTop: $(href).offset().top
+    }, 500, function () {
+        window.location.hash = href;
+    });
+    return false;
+});
+-->

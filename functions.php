@@ -37,13 +37,13 @@ function understrap_post_nav()
         <div class="col-md-12">
             <nav class="navigation post-navigation">
                 <h2 class="sr-only"><?php _e('Post navigation', 'understrap'); ?></h2>
-                <div class="nav-links clearfix">
-                <?php
-            if (get_previous_post_link()) {
-                previous_post_link('<button type="button" class="btn nav-previous float-xs-left float-left" title="%title"><span class="truncate">%link</span></button>', _x('<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap'));
-            }
+                <div class="btn-group" role="group">
+                    <?php
+                if (get_previous_post_link()) {
+                    previous_post_link('<button type="button" class="btn" title="%title">%link</button>', _x('<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap'));
+                }
     if (get_next_post_link()) {
-        next_post_link('<button type="button" class="btn nav-next float-xs-right float-right" title="%title"><span class="truncate">%link</span>', _x('%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap'));
+        next_post_link('<button type="button" class="btn" title="%title">%link', _x('%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap'));
     } ?>
                 </div><!-- .nav-links -->
             </nav><!-- .navigation -->
@@ -53,18 +53,20 @@ function understrap_post_nav()
 
 }
 
-function all_excerpts_get_more_link( $post_excerpt ) {
-    return $post_excerpt . ' [...]<p><a class="btn btn-success understrap-read-more-link" href="' . get_permalink( get_the_ID() ) . '">' . __( 'En savoir plus ...',
-    'understrap' ) . '</a></p>';
+function all_excerpts_get_more_link($post_excerpt)
+{
+    return $post_excerpt . ' [...]<p><a class="btn btn-success understrap-read-more-link" href="' . get_permalink(get_the_ID()) . '">' . __('En savoir plus ...',
+    'understrap') . '</a></p>';
 }
 
-add_filter( 'wp_nav_menu', 'add_search_box_to_main_menu', 10, 2 );
-function add_search_box_to_main_menu ( $nav_menu, $args ) {
-   //echo esc_html($nav_menu);
-    $search_form = '<form class="form-inline" action="'.home_url( '/' ).'" role="search"><input class="form-control" type="text" id="s" name="s" placeholder="Rechercher" style="width:100%"></form>';
+add_filter('wp_nav_menu', 'add_search_box_to_main_menu', 10, 2);
+function add_search_box_to_main_menu($nav_menu, $args)
+{
+    //echo esc_html($nav_menu);
+    $search_form = '<form class="form-inline" action="'.home_url('/').'" role="search"><input class="form-control" type="text" id="s" name="s" placeholder="Rechercher" style="width:100%"></form>';
     if ($args->theme_location == 'primary') {
-     
-    
+
+
            //echo 'plop '.$count;
           //echo esc_html($nav_menu);
     }
@@ -85,16 +87,15 @@ function add_search_box_to_main_menu ( $nav_menu, $args ) {
       'name' => 'AGT : Top banner',
       'id' => 'sidebar-top-bank-banner',
       'description' => 'Display automatic bank banner',
-      'before_widget' => '<div class="rowss">',
+      'before_widget' => '<div class="row">',
       'after_widget' => '</div>'//,
       //'before_title' => '<h3 class="widget-title">',
       //'after_title' => '</h3>',
   ));
- 
+
 //BEL :: <a title="Visiter : %title%." href="%link%" class="%type% breadcrumb-item" content="%position%"><span property="name">%htitle%</span></a>
 //BEL U :: <span class="breadcrumb-item active" content="%position%"><span property="name">%htitle%</span></span>
 //CSS class to add to the menu : menu-bforbank dropdown-item
 
 // $s_form = get_search_form(false);
 // print_r($s_form);
-

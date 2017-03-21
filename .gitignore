@@ -4,8 +4,9 @@ bower_components
 
 node_modules
 
-src
 
+css
+src/sass
 understrap.zip
 
 dist
