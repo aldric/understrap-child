@@ -4,13 +4,21 @@ bower_components
 
 node_modules
 
-
+fonts
 css
-src/sass
+
+src/js/bootstrap4
+src/js/jquery
+src/sass/bootstrap4
+src/sass/understrap
+src/sass/fontawesome
+src/sass/underscores
+
 understrap.zip
 
 dist
 
 dist-product
 *.cache
-fonts/Roboto*
+
+*.map

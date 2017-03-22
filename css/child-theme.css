@@ -2453,12 +2453,7 @@ tbody.collapse.show {
   overflow: hidden;
   background-color: #eceeef; }
 
-.dropdown-item, li.menu-bforbank,
-li.menu-boursorama,
-li.menu-fortuneo,
-li.menu-hellobank,
-li.menu-ingdirect,
-li.menu-monabanq {
+.dropdown-item, li.menu-bforbank, li.menu-boursorama, li.menu-fortuneo, li.menu-hellobank, li.menu-ingdirect, li.menu-monabanq {
   display: block;
   width: 100%;
   padding: 3px 1.5rem;
@@ -2469,45 +2464,15 @@ li.menu-monabanq {
   white-space: nowrap;
   background: none;
   border: 0; }
-  .dropdown-item:focus, li.menu-bforbank:focus,
-  li.menu-boursorama:focus,
-  li.menu-fortuneo:focus,
-  li.menu-hellobank:focus,
-  li.menu-ingdirect:focus,
-  li.menu-monabanq:focus, .dropdown-item:hover, li.menu-bforbank:hover,
-  li.menu-boursorama:hover,
-  li.menu-fortuneo:hover,
-  li.menu-hellobank:hover,
-  li.menu-ingdirect:hover,
-  li.menu-monabanq:hover {
+  .dropdown-item:focus, li.menu-bforbank:focus, li.menu-boursorama:focus, li.menu-fortuneo:focus, li.menu-hellobank:focus, li.menu-ingdirect:focus, li.menu-monabanq:focus, .dropdown-item:hover, li.menu-bforbank:hover, li.menu-boursorama:hover, li.menu-fortuneo:hover, li.menu-hellobank:hover, li.menu-ingdirect:hover, li.menu-monabanq:hover {
     color: #1d1e1f;
     text-decoration: none;
     background-color: #f7f7f9; }
-  .dropdown-item.active, li.active.menu-bforbank,
-  li.active.menu-boursorama,
-  li.active.menu-fortuneo,
-  li.active.menu-hellobank,
-  li.active.menu-ingdirect,
-  li.active.menu-monabanq, .dropdown-item:active, li.menu-bforbank:active,
-  li.menu-boursorama:active,
-  li.menu-fortuneo:active,
-  li.menu-hellobank:active,
-  li.menu-ingdirect:active,
-  li.menu-monabanq:active {
+  .dropdown-item.active, li.active.menu-bforbank, li.active.menu-boursorama, li.active.menu-fortuneo, li.active.menu-hellobank, li.active.menu-ingdirect, li.active.menu-monabanq, .dropdown-item:active, li.menu-bforbank:active, li.menu-boursorama:active, li.menu-fortuneo:active, li.menu-hellobank:active, li.menu-ingdirect:active, li.menu-monabanq:active {
     color: #fff;
     text-decoration: none;
     background-color: #2d2d2d; }
-  .dropdown-item.disabled, li.disabled.menu-bforbank,
-  li.disabled.menu-boursorama,
-  li.disabled.menu-fortuneo,
-  li.disabled.menu-hellobank,
-  li.disabled.menu-ingdirect,
-  li.disabled.menu-monabanq, .dropdown-item:disabled, li.menu-bforbank:disabled,
-  li.menu-boursorama:disabled,
-  li.menu-fortuneo:disabled,
-  li.menu-hellobank:disabled,
-  li.menu-ingdirect:disabled,
-  li.menu-monabanq:disabled {
+  .dropdown-item.disabled, li.disabled.menu-bforbank, li.disabled.menu-boursorama, li.disabled.menu-fortuneo, li.disabled.menu-hellobank, li.disabled.menu-ingdirect, li.disabled.menu-monabanq, .dropdown-item:disabled, li.menu-bforbank:disabled, li.menu-boursorama:disabled, li.menu-fortuneo:disabled, li.menu-hellobank:disabled, li.menu-ingdirect:disabled, li.menu-monabanq:disabled {
     color: #636c72;
     cursor: not-allowed;
     background-color: transparent; }
@@ -11516,12 +11481,7 @@ section {
 .breadcrumb .breadcrumb-item.active {
   color: #818a91; }
 
-.dropdown-menu .dropdown-item:active, .dropdown-menu li.menu-bforbank:active, .dropdown-menu
-li.menu-boursorama:active, .dropdown-menu
-li.menu-fortuneo:active, .dropdown-menu
-li.menu-hellobank:active, .dropdown-menu
-li.menu-ingdirect:active, .dropdown-menu
-li.menu-monabanq:active {
+.dropdown-menu .dropdown-item:active, .dropdown-menu li.menu-bforbank:active, .dropdown-menu li.menu-boursorama:active, .dropdown-menu li.menu-fortuneo:active, .dropdown-menu li.menu-hellobank:active, .dropdown-menu li.menu-ingdirect:active, .dropdown-menu li.menu-monabanq:active {
   background: #f7f7f9; }
 
 .dropdown-menu {
@@ -15202,49 +15162,47 @@ button:focus {
   .img-overlay.red:hover:after {
     background: rgba(213, 0, 0, 0.35); }
 
-li.menu-bforbank,
-li.menu-boursorama,
-li.menu-fortuneo,
-li.menu-hellobank,
-li.menu-ingdirect,
-li.menu-monabanq {
-  padding-left: 37px; }
+li.menu-item:active {
+  background-color: transparent;
+  color: #f13600;
+  font-weight: 600; }
+
+li.menu-bforbank, li.menu-boursorama, li.menu-fortuneo, li.menu-hellobank, li.menu-ingdirect, li.menu-monabanq {
+  padding-left: 37px;
+  background-repeat: no-repeat;
+  background-position: 5px;
+  background-position-y: center; }
 
 li.menu-bforbank {
-  background-image: url("../images//32x32/bforbank.png");
-  background-repeat: no-repeat;
-  background-position: 5px;
-  background-position-y: center; }
+  background-image: url("../images//32x32/bforbank.png"); }
 
 li.menu-boursorama {
-  background-image: url("../images//32x32/boursorama.png");
-  background-repeat: no-repeat;
-  background-position: 5px;
-  background-position-y: center; }
+  background-image: url("../images//32x32/boursorama.png"); }
 
 li.menu-fortuneo {
-  background-image: url("../images//32x32/fortuneo.png");
-  background-repeat: no-repeat;
-  background-position: 5px;
-  background-position-y: center; }
+  background-image: url("../images//32x32/fortuneo.png"); }
 
 li.menu-hellobank {
-  background-image: url("../images//32x32/hellobank.png");
-  background-repeat: no-repeat;
-  background-position: 5px;
-  background-position-y: center; }
+  background-image: url("../images//32x32/hellobank.png"); }
 
 li.menu-ingdirect {
-  background-image: url("../images//32x32/ingdirect.png");
-  background-repeat: no-repeat;
-  background-position: 5px;
-  background-position-y: center; }
+  background-image: url("../images//32x32/ingdirect.png"); }
 
 li.menu-monabanq {
-  background-image: url("../images//32x32/monabanq.png");
-  background-repeat: no-repeat;
-  background-position: 5px;
-  background-position-y: center; }
+  background-image: url("../images//32x32/monabanq.png"); }
+
+.dropdown-item.active, li.active.menu-bforbank, li.active.menu-boursorama, li.active.menu-fortuneo, li.active.menu-hellobank, li.active.menu-ingdirect, li.active.menu-monabanq, .dropdown-item:active, li.menu-bforbank:active, li.menu-boursorama:active, li.menu-fortuneo:active, li.menu-hellobank:active, li.menu-ingdirect:active, li.menu-monabanq:active, .dropdown-menu .menu-item a.nav-link:hover {
+  background-color: #f2f2f2; }
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: #f13600; }
+
+.dropdown-menu .menu-item a.nav-link:hover {
+  background-color: transparent;
+  color: #f13600; }
+
+.dropdown-item.active, li.active.menu-bforbank, li.active.menu-boursorama, li.active.menu-fortuneo, li.active.menu-hellobank, li.active.menu-ingdirect, li.active.menu-monabanq, .dropdown-item:active, li.menu-bforbank:active, li.menu-boursorama:active, li.menu-fortuneo:active, li.menu-hellobank:active, li.menu-ingdirect:active, li.menu-monabanq:active {
+  color: #f13600; }
 
 div.ranking-widget dl, div.ranking-widget dt {
   margin-bottom: 0.2rem; }
@@ -15286,14 +15244,6 @@ div.card-ranking {
 
 div.widget-custom ul {
   padding-left: 1rem; }
-
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-  background-color: transparent;
-  color: #f13600; }
-
-.dropdown-menu .menu-item a.nav-link:hover {
-  background-color: transparent;
-  color: #f13600; }
 
 div.widget-catalogue li a.active {
   text-transform: uppercase;

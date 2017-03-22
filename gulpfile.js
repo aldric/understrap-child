@@ -152,7 +152,7 @@ gulp.task('scripts', function() {
         basePaths.dev + 'js/skip-link-focus-fix.js',
 
         // Custom script
-        basePaths.dev + 'js/main.js'
+        basePaths.dev + 'js/custom/main.js'
     ];
   gulp.src(scripts)
     .pipe(concat('child-theme.min.js'))
@@ -166,7 +166,16 @@ gulp.task('scripts', function() {
 
 // Deleting any file inside the /src folder
 gulp.task('clean-source', function () {
-  return del(['src/**/*',]);
+  return del([basePaths.dev + 'css/**', 
+              basePaths.dev + 'src/js/bootstrap4/*', 
+              basePaths.dev + 'src/js/jquery/*', 
+              basePaths.dev + 'src/js/tether/*', 
+              basePaths.dev + 'src/sass/bootstrap4/*', 
+              basePaths.dev + 'src/sass/understrap/*', 
+              basePaths.dev + 'src/sass/fontawesome/*', 
+              basePaths.dev + 'src/sass/underscores/*',
+              basePaths.dev + 'src/*.js'
+              ]);
 });
 
 // Run: 
@@ -206,7 +215,7 @@ gulp.task('copy-assets', function() {
 
 // Copy jQuery
     gulp.src(basePaths.node + 'jquery/dist/*.js')
-        .pipe(gulp.dest(basePaths.dev + '/js'));
+        .pipe(gulp.dest(basePaths.dev + '/js/jquery'));
 
 // _s SCSS files
     gulp.src(basePaths.node + 'undescores-for-npm/sass/**/*.scss')
@@ -219,7 +228,7 @@ gulp.task('copy-assets', function() {
 
 // Copy Tether JS files
     gulp.src(basePaths.node + 'tether/dist/js/*.js')
-        .pipe(gulp.dest(basePaths.dev + '/js'));
+        .pipe(gulp.dest(basePaths.dev + '/js/tether'));
 
 // Copy Tether CSS files
     gulp.src(basePaths.node + 'tether/dist/css/*.css')

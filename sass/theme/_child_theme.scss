@@ -1,52 +1,59 @@
-li.menu-bforbank,
-li.menu-boursorama,
-li.menu-fortuneo,
-li.menu-hellobank,
-li.menu-ingdirect,
-li.menu-monabanq {
-  @extend .dropdown-item;
-  padding-left: 37px;
-}
-li.menu-bforbank {
-    background-image: url('#{$images-path}/32x32/bforbank.png');
+li {
+  &.menu-item:active {
+    background-color: transparent;
+    color: $link-hover-color;
+    font-weight: 600;
+  }
+  &.menu-bforbank,
+  &.menu-boursorama,
+  &.menu-fortuneo,
+  &.menu-hellobank,
+  &.menu-ingdirect,
+  &.menu-monabanq {
+    @extend .dropdown-item;
+    padding-left: 37px;
     background-repeat: no-repeat;
     background-position: 5px;
     background-position-y: center;
+  }
+}
+
+li.menu-bforbank {
+    background-image: url('#{$images-path}/32x32/bforbank.png');
 }
 
 li.menu-boursorama {
     background-image: url('#{$images-path}/32x32/boursorama.png');
-    background-repeat: no-repeat;
-    background-position: 5px;
-    background-position-y: center;
 }
 
 li.menu-fortuneo {
   background-image: url('#{$images-path}/32x32/fortuneo.png');
-  background-repeat: no-repeat;
-  background-position: 5px;
-  background-position-y: center;
 }
 
 li.menu-hellobank {
   background-image: url('#{$images-path}/32x32/hellobank.png');
-  background-repeat: no-repeat;
-  background-position: 5px;
-  background-position-y: center;
 }
 
 li.menu-ingdirect {
   background-image: url('#{$images-path}/32x32/ingdirect.png');
-  background-repeat: no-repeat;
-  background-position: 5px;
-  background-position-y: center;
 }
 li.menu-monabanq {
   background-image: url('#{$images-path}/32x32/monabanq.png');
-  background-repeat: no-repeat;
-  background-position: 5px;
-  background-position-y: center;
 }
+.dropdown-item.active, .dropdown-item:active, .dropdown-menu .menu-item a.nav-link:hover {
+  background-color: $brand-bg;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+     color : $link-hover-color;
+}
+.dropdown-menu .menu-item a.nav-link:hover  {
+  background-color:  transparent;
+  color : $link-hover-color;
+}
+.dropdown-item.active, .dropdown-item:active {
+  color : $link-hover-color;
+}
+
 div.ranking-widget dl, div.ranking-widget dt {
   margin-bottom: 0.2rem;
 }
@@ -93,14 +100,9 @@ div.widget-custom ul {
     padding-left: 1rem;
 }
 
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-    background-color:  transparent;
-     color : $link-hover-color;
-}
-.dropdown-menu .menu-item a.nav-link:hover  {
-  background-color:  transparent;
-   color : $link-hover-color;
-}
+
+
+
 div.widget-catalogue li a.active {
     text-transform: uppercase;
     color : $link-hover-color;
