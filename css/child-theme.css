@@ -6755,7 +6755,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     display: none !important; } }
 
 .wrapper {
-  padding: 30px 0; }
+  padding: 0; }
 
 #wrapper-hero {
   padding: 0px !important; }

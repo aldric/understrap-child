@@ -32,7 +32,7 @@ $container = get_theme_mod('understrap_container_type');
 
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e('Skip to content', 'understrap'); ?></a>
 
-		<nav class="navbar navbar-toggleable-md  navbar-light  sticky-top">
+		<nav class="navbar navbar-toggleable-md  navbar-light">
 
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -82,7 +82,7 @@ $container = get_theme_mod('understrap_container_type');
   			</div>
 		<?php endif; ?>
 		<!-- end breadcrumbs -->
-		<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+		<div class="fixed-action-btn" style="bottom: 10px; right: 24px;">
         <a class="btn-floating btn-large link-hover-color waves-effect" id="go-to-top" >
           <i class="fa fa-angle-double-up"></i>
         </a>
