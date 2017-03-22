@@ -8,7 +8,6 @@ var BreadcrumbGenerator = function() {
    	};
 
 	this.populate = function() {
-	 
 		var idx = 0;
 		jQuery('nav.breadcrumb a.breadcrumb-item').each(function( index ) {
 				idx = index + 1;
@@ -36,8 +35,7 @@ var BreadcrumbGenerator = function() {
 	};
 
 	this.isEmpty = function() {
-		console.log('self.breadCrumb.itemListElement.length >>' + self.breadCrumb.itemListElement.length);
-		return self.breadCrumb.itemListElement.length <= 1;
+		return self.breadCrumb.itemListElement.length < 2;
 	};
 
 	this.getItem = function(position, link, text) {
@@ -56,11 +54,50 @@ var BreadcrumbGenerator = function() {
 		jQuery("body").append(jQuery("<script></script>").attr("type","application/ld+json").text(this.generate()));
 	};
 }
+
+function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
 jQuery(document).on('ready', function () { 
 	var breadcrumbGenerator = new BreadcrumbGenerator();
+	breadcrumbGenerator.populate();
 	if(!breadcrumbGenerator.isEmpty())
 		breadcrumbGenerator.createJsonLdTag();
 	else {
-		jQuery('div#wrapper-breadcrumbs').hide();
+		jQuery('div#wrapper-breadcrumbs').hide(0);
 	}
+	showHideGoToTop();
 });
+
+
+var $root = jQuery('html, body');
+jQuery('a#go-to-top').click(function() {
+    $root.animate({
+        scrollTop: jQuery("div#page").offset().top
+    }, 500);
+    return false;
+});
+
+function showHideGoToTop() {
+	if(jQuery(window).scrollTop() < 200) {
+		jQuery('a#go-to-top').hide(150, 'linear');
+	} else {
+		jQuery('a#go-to-top').show(150, 'linear');
+	}
+}
+
+jQuery(window).on('scroll', debounce(function(e) {
+	showHideGoToTop();
+}, 500));

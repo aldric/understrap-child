@@ -83,19 +83,8 @@ $container = get_theme_mod('understrap_container_type');
 		<?php endif; ?>
 		<!-- end breadcrumbs -->
 		<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-        <a class="btn-floating btn-large link-hover-color waves-effect" href="#page">
+        <a class="btn-floating btn-large link-hover-color waves-effect" id="go-to-top" >
           <i class="fa fa-angle-double-up"></i>
         </a>
 			</div>
-<!--
-var $root = $('html, body');
-$('a').click(function() {
-    var href = $.attr(this, 'href');
-    $root.animate({
-        scrollTop: $(href).offset().top
-    }, 500, function () {
-        window.location.hash = href;
-    });
-    return false;
-});
--->
+
