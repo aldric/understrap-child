@@ -8,7 +8,9 @@ fonts
 css
 
 src/js/bootstrap4
-src/js/jquery
+src/js/jquery*.js
+src/js/core.js
+src/js/tether
 src/sass/bootstrap4
 src/sass/understrap
 src/sass/fontawesome

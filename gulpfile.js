@@ -142,15 +142,11 @@ gulp.task('watch-bs', ['browser-sync', 'watch', 'cssnano'], function () { });
 // Uglifies and concat all JS files into one
 gulp.task('scripts', function() {
     var scripts = [
-        basePaths.dev + 'js/tether.js', // Must be loaded before BS4
-
+        basePaths.dev + 'js/tether/tether.js', // Must be loaded before BS4
         // Start - All BS4 stuff
         basePaths.dev + 'js/bootstrap4/bootstrap.js',
-
         // End - All BS4 stuff
-
         basePaths.dev + 'js/skip-link-focus-fix.js',
-
         // Custom script
         basePaths.dev + 'js/custom/main.js'
     ];
@@ -215,7 +211,7 @@ gulp.task('copy-assets', function() {
 
 // Copy jQuery
     gulp.src(basePaths.node + 'jquery/dist/*.js')
-        .pipe(gulp.dest(basePaths.dev + '/js/jquery'));
+        .pipe(gulp.dest(basePaths.dev + '/js'));
 
 // _s SCSS files
     gulp.src(basePaths.node + 'undescores-for-npm/sass/**/*.scss')
