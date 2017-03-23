@@ -26,6 +26,7 @@
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
     "browser-sync": "^2.18.7",
+    "bs-layout-boilerplate-npm": "github:frontendmatter/bs-layout-boilerplate-npm",
     "del": "^2.2.2",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
