@@ -188,10 +188,15 @@ gulp.task('scripts', function() {
         // End - All BS4 stuff
         basePaths.dev + 'js/skip-link-focus-fix.js',
         // Custom script
-        basePaths.dev + 'js/custom/main.js',
-        // Custom script
-        basePaths.dev + 'js/bootstrap-layout/bootstrap-layout.js'
+        basePaths.dev + 'js/bootstrap-layout/bootstrap-layout.js',
+
+        basePaths.dev + 'js/simplebar/simplebar.js',
+        
+        basePaths.dev + 'js/bootstrap-layout-scrollable/bootstrap-layout-scrollable.js',
+                // Custom script
+        basePaths.dev + 'js/custom/main.js'
     ];
+
     gulp.src(scripts)
         .pipe(concat('child-theme.min.js'))
         .pipe(uglify())
@@ -270,18 +275,24 @@ gulp.task('copy-assets', function() {
     // Copy Tether CSS files
     gulp.src(basePaths.node + 'tether/dist/js/*.js')
         .pipe(gulp.dest(basePaths.dev + '/js/tether'));;
-    //
-    // gulp.src(basePaths.node + 'bootstrap-layout-scrollable/src/sass/**/*.scss')
-    //     .pipe(gulp.dest(basePaths.dev + '/css/bootstrap-layout-scrollable'));
-    //
-    // gulp.src(basePaths.node + 'bootstrap-layout-scrollable/src/js/*.js')
+    
+    gulp.src(basePaths.node + 'bootstrap-layout-scrollable/dist/*.css')
+        .pipe(gulp.dest(basePaths.dev + '/css'));
+    
+    // gulp.src(basePaths.node + 'bootstrap-layout-scrollable/dist/*.js')
     //     .pipe(gulp.dest(basePaths.dev + '/js/bootstrap-layout-scrollable'));
 
     gulp.src(basePaths.node + 'bootstrap-layout/dist/*.css')
         .pipe(gulp.dest(basePaths.dev + '/css'));
 
-    gulp.src(basePaths.node + 'bootstrap-layout/dist/*.js')
-        .pipe(gulp.dest(basePaths.dev + '/js/bootstrap-layout'));
+    // gulp.src(basePaths.node + 'bootstrap-layout/dist/*.js')
+    //     .pipe(gulp.dest(basePaths.dev + '/js/bootstrap-layout'));
+
+    gulp.src(basePaths.node + 'simplebar/dist/*.css')
+        .pipe(gulp.dest(basePaths.dev + '/css'));
+        
+    gulp.src(basePaths.node + 'simplebar/dist/*.js')
+        .pipe(gulp.dest(basePaths.dev + '/js/simplebar'));
 });
 
 // Run

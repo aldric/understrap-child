@@ -15162,196 +15162,6 @@ button:focus {
   .img-overlay.red:hover:after {
     background: rgba(213, 0, 0, 0.35); }
 
-li.menu-item:active {
-  background-color: transparent;
-  color: #f13600;
-  font-weight: 600; }
-
-li.menu-bforbank, li.menu-boursorama, li.menu-fortuneo, li.menu-hellobank, li.menu-ingdirect, li.menu-monabanq {
-  padding-left: 37px;
-  background-repeat: no-repeat;
-  background-position: 5px;
-  background-position-y: center; }
-
-li.menu-bforbank {
-  background-image: url("../images//32x32/bforbank.png"); }
-
-li.menu-boursorama {
-  background-image: url("../images//32x32/boursorama.png"); }
-
-li.menu-fortuneo {
-  background-image: url("../images//32x32/fortuneo.png"); }
-
-li.menu-hellobank {
-  background-image: url("../images//32x32/hellobank.png"); }
-
-li.menu-ingdirect {
-  background-image: url("../images//32x32/ingdirect.png"); }
-
-li.menu-monabanq {
-  background-image: url("../images//32x32/monabanq.png"); }
-
-.dropdown-item.active, li.active.menu-bforbank, li.active.menu-boursorama, li.active.menu-fortuneo, li.active.menu-hellobank, li.active.menu-ingdirect, li.active.menu-monabanq, .dropdown-item:active, li.menu-bforbank:active, li.menu-boursorama:active, li.menu-fortuneo:active, li.menu-hellobank:active, li.menu-ingdirect:active, li.menu-monabanq:active, .dropdown-menu .menu-item a.nav-link:hover {
-  background-color: #f2f2f2; }
-
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-  color: #f13600; }
-
-.dropdown-menu .menu-item a.nav-link:hover {
-  background-color: transparent;
-  color: #f13600; }
-
-.dropdown-item.active, li.active.menu-bforbank, li.active.menu-boursorama, li.active.menu-fortuneo, li.active.menu-hellobank, li.active.menu-ingdirect, li.active.menu-monabanq, .dropdown-item:active, li.menu-bforbank:active, li.menu-boursorama:active, li.menu-fortuneo:active, li.menu-hellobank:active, li.menu-ingdirect:active, li.menu-monabanq:active {
-  color: #f13600; }
-
-div.ranking-widget dl, div.ranking-widget dt {
-  margin-bottom: 0.2rem; }
-
-div.ranking-widget dl, div.ranking-widget div.pb-4.mb-2, div.ranking-widget div.card-header {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
-
-[v-cloak] {
-  display: none; }
-
-ul.rating-green {
-  color: #5cb85c;
-  text-align: center; }
-
-ul.rating {
-  color: #ffa000;
-  text-align: center; }
-
-div.card-ranking {
-  background-color: #f2f2f2; }
-  div.card-ranking > .card-block {
-    padding: 0.75rem; }
-
-.widget-title, .footer-wrapper .bn-title {
-  border-bottom: 1px solid #f13600;
-  position: relative;
-  margin-bottom: 15px;
-  padding: 12px 0;
-  text-transform: uppercase; }
-  .widget-title:before, .footer-wrapper .bn-title:before {
-    bottom: 0;
-    content: '';
-    display: inline-block;
-    left: 0;
-    position: absolute;
-    text-transform: uppercase;
-    width: 40%;
-    border-bottom: 7px solid #f13600; }
-
-div.widget-custom ul {
-  padding-left: 1rem; }
-
-div.widget-catalogue li a.active {
-  text-transform: uppercase;
-  color: #f13600;
-  cursor: inherit; }
-  div.widget-catalogue li a.active:before {
-    font-family: FontAwesome;
-    font-weight: 600;
-    margin-right: 5px;
-    content: '\f124'; }
-
-button span.truncate {
-  width: 250px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: inline-block;
-  color: #2d2d2d; }
-
-#wrapper-breadcrumbs {
-  padding: 10px 0; }
-
-.fixed-action-btn {
-  position: fixed;
-  right: 23px;
-  bottom: 23px;
-  padding-top: 15px;
-  margin-bottom: 0;
-  z-index: 998; }
-  .fixed-action-btn ul {
-    left: 0;
-    right: 0;
-    text-align: center;
-    position: absolute;
-    bottom: 64px;
-    margin: 0; }
-    .fixed-action-btn ul li {
-      margin-bottom: 15px; }
-    .fixed-action-btn ul a.btn-floating {
-      opacity: 0; }
-
-.btn-flat {
-  position: relative;
-  padding: 8px 30px;
-  border: none;
-  margin: 10px;
-  text-decoration: none;
-  outline: 0 !important; }
-
-.btn-floating {
-  display: inline-block;
-  line-height: 37px;
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  width: 37px;
-  height: 37px;
-  padding: 0;
-  background-color: #a6c;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  transition: .3s;
-  margin: 10px; }
-  .btn-floating i {
-    display: inline-block;
-    line-height: 37px;
-    color: #fff; }
-  .btn-floating:hover {
-    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
-
-.btn-flat {
-  background-color: transparent; }
-  .btn-flat:focus {
-    background-color: transparent; }
-
-.btn-floating i {
-  width: inherit;
-  text-align: center;
-  font-size: 1.6rem; }
-
-.btn-floating:before {
-  border-radius: 0; }
-
-.btn-floating.btn-large {
-  width: 55.5px;
-  height: 55.5px; }
-  .btn-floating.btn-large i {
-    line-height: 55.5px; }
-
-.link-hover-color {
-  background-color: #f13600; }
-
-nav.post-navigation {
-  padding: 15px 0; }
-
-.wrapper {
-  padding: 0; }
-
-.navbar-light .navbar-toggler {
-  border: none; }
-
-.navbar-toggler {
-  padding-left: 0; }
-
 body, html {
   position: relative;
   height: 100%;
@@ -18732,3 +18542,340 @@ body, html {
 
 .bg-light-9 {
   background-color: rgba(255, 255, 255, 0.9); }
+
+/*!
+ * 
+ *             SimpleBar.js - v2.2.1
+ *             Scrollbars, simpler.
+ *             https://grsmto.github.io/simplebar/
+ *             
+ *             Made by Adrien Grsmto from a fork by Jonathan Nicol
+ *             Under MIT License
+ *         
+ */
+[data-simplebar] {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.simplebar-scroll-content {
+  overflow: scroll;
+  position: relative;
+  z-index: 0;
+  padding: 0 15px 15px 0;
+  margin: 0 -15px -15px 0;
+  max-width: 100%;
+  width: 100%; }
+
+.simplebar-content {
+  margin-bottom: -15px; }
+
+.simplebar-track {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 11px; }
+
+.simplebar-track .simplebar-scrollbar {
+  position: absolute;
+  right: 2px;
+  border-radius: 7px;
+  min-height: 10px;
+  width: 7px;
+  opacity: 0;
+  -webkit-transition: opacity .2s linear;
+  transition: opacity .2s linear;
+  background: #6c6e71;
+  background-clip: padding-box; }
+
+.simplebar-track:hover .simplebar-scrollbar {
+  opacity: .7;
+  -webkit-transition: opacity 0 linear;
+  transition: opacity 0 linear; }
+
+.simplebar-track .simplebar-scrollbar.visible {
+  opacity: .7; }
+
+.horizontal.simplebar-track {
+  top: auto;
+  left: 0;
+  width: auto;
+  height: 11px; }
+
+.horizontal.simplebar-track .simplebar-scrollbar {
+  right: auto;
+  top: 2px;
+  height: 7px;
+  min-height: 0;
+  min-width: 10px;
+  width: auto; }
+
+.simplebar-track {
+  width: 5px; }
+
+.simplebar-track .simplebar-scrollbar {
+  background: #6c6e71; }
+
+.simplebar.horizontal .simplebar-track .simplebar-scrollbar {
+  height: 5px; }
+
+.layout-content > .simplebar-scroll-content {
+  bottom: 1.25rem; }
+
+.ls-top > .layout-content > .simplebar-scroll-content {
+  top: 20px; }
+
+.top-navbar > .layout-content > .simplebar-scroll-content {
+  top: 56px; }
+
+.ls-top-navbar > .layout-content > .simplebar-scroll-content {
+  top: 76px; }
+
+.sidebar-dark .simplebar-track .simplebar-scrollbar {
+  background: #fff; }
+
+.sidebar-light .simplebar-track .simplebar-scrollbar {
+  background: #6c6e71; }
+
+.sidebar-light .sidebar-submenu .sidebar-menu-button, .sidebar-light .sidebar-submenu .sidebar-menu-icon {
+  color: #2d2d2d; }
+
+.sidebar-light .sidebar-submenu .sidebar-menu-button:active, .sidebar-light .sidebar-submenu .sidebar-menu-icon:active {
+  color: #f13600; }
+
+.sidebar-light .sidebar-submenu .sidebar-menu-button:hover, .sidebar-light .sidebar-submenu .sidebar-menu-icon:hover {
+  background-color: transparent;
+  color: #f13600;
+  font-weight: 500; }
+
+.sidebar-light .sm-active-button-bg .active > .sidebar-menu-button {
+  background-color: #2d2d2d;
+  color: #f13600;
+  font-weight: 500; }
+
+li.menu-item:active {
+  background-color: transparent;
+  color: #f13600;
+  font-weight: 500; }
+
+li.menu-bforbank, li.menu-boursorama, li.menu-fortuneo, li.menu-hellobank, li.menu-ingdirect, li.menu-monabanq {
+  padding-left: 37px;
+  padding-right: 0;
+  background-repeat: no-repeat;
+  background-position: 5px;
+  background-position-y: center; }
+
+li.menu-bforbank {
+  background-image: url("../images//32x32/bforbank.png"); }
+
+li.menu-boursorama {
+  background-image: url("../images//32x32/boursorama.png"); }
+
+li.menu-fortuneo {
+  background-image: url("../images//32x32/fortuneo.png"); }
+
+li.menu-hellobank {
+  background-image: url("../images//32x32/hellobank.png"); }
+
+li.menu-ingdirect {
+  background-image: url("../images//32x32/ingdirect.png"); }
+
+li.menu-monabanq {
+  background-image: url("../images//32x32/monabanq.png"); }
+
+.dropdown-item.active, li.active.menu-bforbank, li.active.menu-boursorama, li.active.menu-fortuneo, li.active.menu-hellobank, li.active.menu-ingdirect, li.active.menu-monabanq, .dropdown-item:active, li.menu-bforbank:active, li.menu-boursorama:active, li.menu-fortuneo:active, li.menu-hellobank:active, li.menu-ingdirect:active, li.menu-monabanq:active, .dropdown-menu .menu-item a.nav-link:hover {
+  background-color: #f2f2f2; }
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: #f13600; }
+
+.dropdown-menu .menu-item a.nav-link:hover {
+  background-color: transparent;
+  color: #f13600; }
+
+.dropdown-item.active, li.active.menu-bforbank, li.active.menu-boursorama, li.active.menu-fortuneo, li.active.menu-hellobank, li.active.menu-ingdirect, li.active.menu-monabanq, .dropdown-item:active, li.menu-bforbank:active, li.menu-boursorama:active, li.menu-fortuneo:active, li.menu-hellobank:active, li.menu-ingdirect:active, li.menu-monabanq:active {
+  color: #f13600; }
+
+div.ranking-widget dl, div.ranking-widget dt {
+  margin-bottom: 0.2rem; }
+
+div.ranking-widget dl, div.ranking-widget div.pb-4.mb-2, div.ranking-widget div.card-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+
+[v-cloak] {
+  display: none; }
+
+ul.rating-green {
+  color: #5cb85c;
+  text-align: center; }
+
+ul.rating {
+  color: #ffa000;
+  text-align: center; }
+
+div.card-ranking {
+  background-color: #f2f2f2; }
+  div.card-ranking > .card-block {
+    padding: 0.75rem; }
+
+.widget-title, .footer-wrapper .bn-title {
+  border-bottom: 1px solid #f13600;
+  position: relative;
+  margin-bottom: 15px;
+  padding: 12px 0;
+  text-transform: uppercase; }
+  .widget-title:before, .footer-wrapper .bn-title:before {
+    bottom: 0;
+    content: '';
+    display: inline-block;
+    left: 0;
+    position: absolute;
+    text-transform: uppercase;
+    width: 40%;
+    border-bottom: 7px solid #f13600; }
+
+div.widget-custom ul {
+  padding-left: 1rem; }
+
+div.widget-catalogue li a.active {
+  text-transform: uppercase;
+  color: #f13600;
+  cursor: inherit; }
+  div.widget-catalogue li a.active:before {
+    font-family: FontAwesome;
+    font-weight: 600;
+    margin-right: 5px;
+    content: '\f124'; }
+
+button span.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  color: #2d2d2d; }
+
+#wrapper-breadcrumbs {
+  padding: 10px 0; }
+
+.fixed-action-btn {
+  position: fixed;
+  right: 23px;
+  bottom: 23px;
+  padding-top: 15px;
+  margin-bottom: 0;
+  z-index: 998; }
+  .fixed-action-btn ul {
+    left: 0;
+    right: 0;
+    text-align: center;
+    position: absolute;
+    bottom: 64px;
+    margin: 0; }
+    .fixed-action-btn ul li {
+      margin-bottom: 15px; }
+    .fixed-action-btn ul a.btn-floating {
+      opacity: 0; }
+
+.btn-flat {
+  position: relative;
+  padding: 8px 30px;
+  border: none;
+  margin: 10px;
+  text-decoration: none;
+  outline: 0 !important; }
+
+.btn-floating {
+  display: inline-block;
+  line-height: 37px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 37px;
+  height: 37px;
+  padding: 0;
+  background-color: #a6c;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  transition: .3s;
+  margin: 10px; }
+  .btn-floating i {
+    display: inline-block;
+    line-height: 37px;
+    color: #fff; }
+  .btn-floating:hover {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
+
+.btn-flat {
+  background-color: transparent; }
+  .btn-flat:focus {
+    background-color: transparent; }
+
+.btn-floating i {
+  width: inherit;
+  text-align: center;
+  font-size: 1.6rem; }
+
+.btn-floating:before {
+  border-radius: 0; }
+
+.btn-floating.btn-large {
+  width: 55.5px;
+  height: 55.5px; }
+  .btn-floating.btn-large i {
+    line-height: 55.5px; }
+
+.link-hover-color {
+  background-color: #f13600; }
+
+nav#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.16), 0 4px 0px 0 rgba(0, 0, 0, 0.12); }
+
+nav.post-navigation {
+  padding: 15px 0; }
+
+.wrapper {
+  padding: 0; }
+
+.navbar-light .navbar-toggler {
+  border: none; }
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 {
+  font-size: 18px; }
+
+.material-icons.md-24 {
+  font-size: 24px; }
+
+.material-icons.md-36 {
+  font-size: 36px; }
+
+.material-icons.md-48 {
+  font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54); }
+
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light {
+  color: white; }
+
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3); }

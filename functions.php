@@ -1,4 +1,8 @@
 <?php
+
+
+include(realpath(dirname(__FILE__))).'/classes/bootstrap-sidebar-wp-navwalker.php';
+
 function understrap_remove_scripts()
 {
     wp_dequeue_style('understrap-styles');
@@ -72,6 +76,17 @@ function add_search_box_to_main_menu($nav_menu, $args)
     }
     return str_replace('</div>', $search_form.'</div>', $nav_menu, $count);
 }
+
+function my_secondary_menu_classes( $classes, $item, $args ) {
+    //print_r($item);
+    if ( 'MainMenuBanks' === $args->menu ) {
+        $classes[] = 'sidebar-menu-item';
+    }
+
+    return $classes;
+}
+
+add_filter( 'nav_menu_css_class', 'my_secondary_menu_classes', 10, 3 ); 
 
   register_sidebar(array(
       'name' => 'AGT : Top breadcrumbs',

@@ -1,8 +1,29 @@
-li {
-  &.menu-item:active {
+.sidebar-light .sidebar-submenu .sidebar-menu-button, .sidebar-light .sidebar-submenu .sidebar-menu-icon {
+  color: $brand-primary;
+}
+.sidebar-light .sidebar-submenu .sidebar-menu-button:active, .sidebar-light .sidebar-submenu .sidebar-menu-icon:active {
+  color: $link-hover-color;
+}
+.sidebar-light .sidebar-submenu .sidebar-menu-button:hover, .sidebar-light .sidebar-submenu .sidebar-menu-icon:hover
+{
     background-color: transparent;
     color: $link-hover-color;
-    font-weight: 600;
+    font-weight: 500;
+    
+}
+.sidebar-light .sm-active-button-bg .active>.sidebar-menu-button {
+    background-color: $brand-primary;
+    color: $link-hover-color;
+    font-weight: 500;
+}
+
+li {
+  &.menu-item:active {
+    // @extend .sidebar-light;
+    // @extend .sidebar-light;
+    background-color: transparent;
+    color: $link-hover-color;
+    font-weight: 500;
   }
   &.menu-bforbank,
   &.menu-boursorama,
@@ -12,6 +33,7 @@ li {
   &.menu-monabanq {
     @extend .dropdown-item;
     padding-left: 37px;
+    padding-right: 0;
     background-repeat: no-repeat;
     background-position: 5px;
     background-position-y: center;
@@ -214,6 +236,12 @@ button span.truncate {
   background-color : $link-hover-color;
 }
 
+nav#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  box-shadow: 0 2px 0px 0 rgba(0,0,0,.16), 0 4px 0px 0 rgba(0,0,0,.12);
+}
 
 nav.post-navigation {
   padding : 15px 0;
@@ -227,6 +255,16 @@ nav.post-navigation {
     border: none;
 }
 
-.navbar-toggler {
-    padding-left: 0;
-}
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }

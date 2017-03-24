@@ -85,19 +85,22 @@ jQuery(document).on('ready', function() {
 var $root = jQuery('html, body');
 jQuery('a#go-to-top').click(function() {
     $root.animate({
-        scrollTop: jQuery("div#page").offset().top
+        scrollTop: jQuery("div#content").offset().top
     }, 500);
     return false;
 });
 
 function showHideGoToTop() {
-    if (jQuery(window).scrollTop() < 200) {
+    if (jQuery('div#content').offset().top > -200) {
         jQuery('a#go-to-top').hide(150, 'linear');
     } else {
         jQuery('a#go-to-top').show(150, 'linear');
     }
 }
+jQuery(window).load(function() {
+    setInterval(
+    function() {
+        showHideGoToTop();
+    }, 1000);
+});
 
-jQuery(window).on('scroll', debounce(function(e) {
-    showHideGoToTop();
-}, 500));

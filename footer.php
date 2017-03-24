@@ -25,12 +25,12 @@ $container = get_theme_mod('understrap_container_type');
 
 					<div class="site-info">
 						<!--Copyright-->
-<div class="footer-copyright">
-	<div class="container-fluid text-center">
-		&copy; <?php echo date("Y"); ?> Copyright: <a href="https://www.topbanque.com"> topbanque.net </a>
-	</div>
-</div>
-<!--/.Copyright-->
+							<div class="footer-copyright">
+								<div class="container-fluid text-center">
+									&copy; <?php echo date("Y"); ?> Copyright: <a href="https://www.topbanque.net"> topbanque.net </a>
+								</div>
+							</div>
+							<!--/.Copyright-->
 					</div><!-- .site-info -->
 
 				</footer><!-- #colophon -->
@@ -42,6 +42,8 @@ $container = get_theme_mod('understrap_container_type');
 	</div><!-- container end -->
 
 </div><!-- wrapper end -->
+
+
 
 </div><!-- #page -->
 
