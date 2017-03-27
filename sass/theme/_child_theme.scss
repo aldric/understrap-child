@@ -9,10 +9,10 @@
     background-color: transparent;
     color: $link-hover-color;
     font-weight: 500;
-    
+
 }
 .sidebar-light .sm-active-button-bg .active>.sidebar-menu-button {
-    background-color: $brand-primary;
+    background-color: transparent;
     color: $link-hover-color;
     font-weight: 500;
 }
@@ -240,7 +240,7 @@ nav#navbar {
   position: sticky;
   top: 0;
   z-index: 10000;
-  box-shadow: 0 2px 0px 0 rgba(0,0,0,.16), 0 4px 0px 0 rgba(0,0,0,.12);
+  box-shadow: none;
 }
 
 nav.post-navigation {
@@ -268,3 +268,14 @@ nav.post-navigation {
 /* Rules for using icons as white on a dark background. */
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+.navbar-light form input[type=text] {
+    border-bottom: 1px solid $brand-primary;
+}
+input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=search-md]:focus:not([readonly]), input[type=search]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=url]:focus:not([readonly]), textarea.md-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid $brand-secondary;
+    box-shadow: 0 1px 0 0 $brand-secondary;
+}
+// @media (min-width: 768px){
+//   div.layout-container > nav.layout-sidebar-l3-md-up {  margin-left: 250px;}
+// }

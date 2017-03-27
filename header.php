@@ -64,16 +64,16 @@ $container = get_theme_mod('understrap_container_type');
     <a href="#" class="sidebar-menu-button" data-toggle="sidebar-collapse">Banques</a>
 	<ul class="sidebar-submenu">
 		<?php wp_nav_menu(
-						array(
-								'menu'            => 'MainMenuBanks',
-								'container'       => '',
-								'menu_class'      => 'sidebar-menu',
-								'fallback_cb'     => '',
-								'menu_id'         => 'sidebar-menu',
-								'walker'          => new WP_BootstrapSidebar_Navwalker()
-						)
+                        array(
+                                'menu'            => 'MainMenuBanks',
+                                'container'       => '',
+                                'menu_class'      => 'sidebar-menu',
+                                'fallback_cb'     => '',
+                                'menu_id'         => 'sidebar-menu',
+                                'walker'          => new WP_BootstrapSidebar_Navwalker()
+                        )
                             ); ?>
 		</ul>
-     </li>							
+     </li>
 </div>
 <!-- // END .Sidebar -->
