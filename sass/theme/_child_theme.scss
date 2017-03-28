@@ -31,7 +31,6 @@ li {
   &.menu-hellobank,
   &.menu-ingdirect,
   &.menu-monabanq {
-    @extend .dropdown-item;
     padding-left: 37px;
     padding-right: 0;
     background-repeat: no-repeat;
@@ -62,18 +61,12 @@ li.menu-ingdirect {
 li.menu-monabanq {
   background-image: url('#{$images-path}/32x32/monabanq.png');
 }
-.dropdown-item.active, .dropdown-item:active, .dropdown-menu .menu-item a.nav-link:hover {
-  background-color: $brand-bg;
-}
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-     color : $link-hover-color;
-}
-.dropdown-menu .menu-item a.nav-link:hover  {
-  background-color:  transparent;
-  color : $link-hover-color;
-}
-.dropdown-item.active, .dropdown-item:active {
-  color : $link-hover-color;
+
+ul#nav-mobile {
+  .side-nav li>a, li.active, .li:active, .menu-item a.nav-link:hover {
+    background-color: $brand-bg;
+    color : $link-hover-color;  
+  }
 }
 
 div.ranking-widget dl, div.ranking-widget dt {
@@ -122,15 +115,12 @@ div.widget-custom ul {
     padding-left: 1rem;
 }
 
-
-
-
 div.widget-catalogue li a.active {
     text-transform: uppercase;
     color : $link-hover-color;
     cursor: inherit;
       &:before {
-        font-family: FontAwesome;
+        font-family: 'Roboto', sans-serif;
         font-weight: 600;
         margin-right: 5px;
       	content: '\f124';
@@ -144,116 +134,7 @@ button span.truncate {
     display: inline-block;
     color: #2d2d2d;
 }
-#wrapper-breadcrumbs {
-  padding: 10px 0;
-}
 
-.fixed-action-btn {
-  position: fixed;
-  right: 23px;
-  bottom: 23px;
-  padding-top: 15px;
-  margin-bottom: 0;
-  z-index: 998;
-  ul {
-    left: 0;
-    right: 0;
-    text-align: center;
-    position: absolute;
-    bottom: 64px;
-    margin: 0;
-    li {
-      margin-bottom: 15px;
-    }
-    a.btn-floating {
-      opacity: 0;
-    }
-  }
-}
-
-.btn-flat {
-  position: relative;
-  padding: 8px 30px;
-  border: none;
-  margin: 10px;
-  text-decoration: none;
-  outline: 0 !important;
-}
-
-.btn-floating {
-  display: inline-block;
-  line-height: 37px;
-  color: #fff;
-  i {
-    display: inline-block;
-    line-height: 37px;
-    color: #fff;
-  }
-  &:hover {
-    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-  }
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  width: 37px;
-  height: 37px;
-  padding: 0;
-  background-color: #a6c;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  transition: .3s;
-  margin: 10px;
-}
-
-.btn-flat {
-  background-color: transparent;
-  &:focus {
-    background-color: transparent;
-  }
-}
-
-.btn-floating {
-  i {
-    width: inherit;
-    text-align: center;
-    font-size: 1.6rem;
-  }
-  &:before {
-    border-radius: 0;
-  }
-  &.btn-large {
-    width: 55.5px;
-    height: 55.5px;
-    i {
-      line-height: 55.5px;
-    }
-  }
-}
-.link-hover-color {
-  background-color : $link-hover-color;
-}
-
-nav#navbar {
-  position: sticky;
-  top: 0;
-  z-index: 10000;
-  box-shadow: none;
-}
-
-nav.post-navigation {
-  padding : 15px 0;
-}
-
-.wrapper {
-     padding: 0;
-}
-
-.navbar-light .navbar-toggler {
-    border: none;
-}
 
 /* Rules for sizing the icon. */
 .material-icons.md-18 { font-size: 18px; }
@@ -269,13 +150,37 @@ nav.post-navigation {
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
-.navbar-light form input[type=text] {
-    border-bottom: 1px solid $brand-primary;
-}
-input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=search-md]:focus:not([readonly]), input[type=search]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=url]:focus:not([readonly]), textarea.md-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid $brand-secondary;
-    box-shadow: 0 1px 0 0 $brand-secondary;
-}
-// @media (min-width: 768px){
-//   div.layout-container > nav.layout-sidebar-l3-md-up {  margin-left: 250px;}
+// .navbar-light form input[type=text] {
+//     border-bottom: 1px solid $brand-primary;
 // }
+
+   header {
+      padding-left: 0;
+    }
+
+    // @media only screen and (max-width : 992px) {
+    //    main, footer {
+    //     padding-left: 10px;
+    //   } 
+    // }
+
+   .waves-effect.waves-toppy .waves-ripple {
+     /* The alpha value allows the text and background color 
+     of the button to still show through. */
+      background-color: rgba($link-hover-color, 0.80);
+    }
+ul#nav-mobile.side-nav.fixed li.logo {
+  margin-bottom: 0px;
+}
+
+ul#nav-mobile li.search {
+ position: relative;
+ top:0;
+ margin-bottom: 20px;
+}
+#logo-container {
+  margin-bottom: 0;
+}
+ul.side-nav.fixed li {
+    width: 100%;
+}

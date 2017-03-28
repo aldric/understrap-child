@@ -70,7 +70,8 @@ class WP_BootstrapSidebar_Navwalker extends Walker_Nav_Menu {
 		} else {
 			$class_names = $value = '';
 			$classes     = empty( $item->classes ) ? array() : (array) $item->classes;
-			$classes[]   = 'sidebar-menu-item menu-item-' . $item->ID;
+			$classes[]   = ' menu-item-' . $item->ID;
+			$classes[]   = ' waves-effect waves-toppy';
 			$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
 			/*
 			if ( $args->has_children )

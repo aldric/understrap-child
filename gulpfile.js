@@ -187,13 +187,39 @@ gulp.task('scripts', function() {
         basePaths.dev + 'js/bootstrap4/bootstrap.js',
         // End - All BS4 stuff
         basePaths.dev + 'js/skip-link-focus-fix.js',
-        // Custom script
-        basePaths.dev + 'js/bootstrap-layout/bootstrap-layout.js',
-
-        basePaths.dev + 'js/simplebar/simplebar.js',
         
-        basePaths.dev + 'js/bootstrap-layout-scrollable/bootstrap-layout-scrollable.js',
-                // Custom script
+        basePaths.dev + 'js/materialize/initial.js',
+        basePaths.dev + 'js/materialize/jquery.easing.1.3.js',
+        basePaths.dev + 'js/materialize/animation.js',
+        basePaths.dev + 'js/materialize/velocity.min.js',
+        basePaths.dev + 'js/materialize/hammer.min.js',
+        basePaths.dev + 'js/materialize/jquery.hammer.js',
+        basePaths.dev + 'js/materialize/global.js',
+        basePaths.dev + 'js/materialize/collapsible.js',
+        basePaths.dev + 'js/materialize/dropdown.js',
+        basePaths.dev + 'js/materialize/modal.js',
+        basePaths.dev + 'js/materialize/materialbox.js',
+        basePaths.dev + 'js/materialize/parallax.js',
+        basePaths.dev + 'js/materialize/tabs.js',
+        basePaths.dev + 'js/materialize/tooltip.js',
+        basePaths.dev + 'js/materialize/waves.js',
+        basePaths.dev + 'js/materialize/toasts.js',
+        basePaths.dev + 'js/materialize/sideNav.js',
+        basePaths.dev + 'js/materialize/scrollspy.js',
+        basePaths.dev + 'js/materialize/forms.js',
+        basePaths.dev + 'js/materialize/slider.js',
+        basePaths.dev + 'js/materialize/cards.js',
+        basePaths.dev + 'js/materialize/chips.js',
+        basePaths.dev + 'js/materialize/pushpin.js',
+        basePaths.dev + 'js/materialize/buttons.js',
+        basePaths.dev + 'js/materialize/transitions.js',
+        basePaths.dev + 'js/materialize/scrollFire.js',
+        basePaths.dev + 'js/materialize/date_picker/picker.js',
+        basePaths.dev + 'js/materialize/date_picker/picker.date.js',
+        basePaths.dev + 'js/materialize/character_counter.js',
+        basePaths.dev + 'js/materialize/carousel.js',
+        basePaths.dev + 'js/materialize/tapTarget.js',
+        // Custom script
         basePaths.dev + 'js/custom/main.js'
     ];
 
@@ -210,13 +236,9 @@ gulp.task('scripts', function() {
 // Deleting any file inside the /src folder
 gulp.task('clean-source', function() {
     return del([basePaths.dev + 'css/**',
-        basePaths.dev + 'src/js/bootstrap4/*',
+        basePaths.dev + 'src/js/materialize/*',
         basePaths.dev + 'src/js/jquery/*',
-        basePaths.dev + 'src/js/tether/*',
-        basePaths.dev + 'src/sass/bootstrap4/*',
-        basePaths.dev + 'src/sass/understrap/*',
-        basePaths.dev + 'src/sass/fontawesome/*',
-        basePaths.dev + 'src/sass/underscores/*',
+        basePaths.dev + 'src/sass/materialize/*',
         basePaths.dev + 'src/*.js'
     ]);
 });
@@ -228,71 +250,19 @@ gulp.task('clean-source', function() {
 
 // Copy all Bootstrap JS files
 gulp.task('copy-assets', function() {
-
-    ////////////////// All Bootstrap 4 Assets /////////////////////////
-    // Copy all Bootstrap JS files
-    gulp.src(basePaths.node + 'bootstrap/dist/js/**/*.js')
-        .pipe(gulp.dest(basePaths.dev + '/js/bootstrap4'));
-
-    // Copy all Bootstrap SCSS files
-    gulp.src(basePaths.node + 'bootstrap/scss/**/*.scss')
-        .pipe(gulp.dest(basePaths.dev + '/sass/bootstrap4'));
-    ////////////////// End Bootstrap 4 Assets /////////////////////////
-
-    // Copy all UnderStrap SCSS files
-    gulp.src(basePaths.node + 'understrap/sass/**/*.scss')
-        .pipe(gulp.dest(basePaths.dev + '/sass/understrap'));
-
-    // Copy all Font Awesome Fonts
-    gulp.src(basePaths.node + 'font-awesome/fonts/**/*.{ttf,woff,woff2,eof,svg}')
-        .pipe(gulp.dest('./fonts'));
-
-    // Copy all Font Awesome SCSS files
-    gulp.src(basePaths.node + 'font-awesome/scss/*.scss')
-        .pipe(gulp.dest(basePaths.dev + '/sass/fontawesome'));
-
-    // Copy all Roboto Fonts
-    gulp.src(basePaths.node + 'roboto-fontface/fonts/**/*.{ttf,woff,woff2,eof,svg}')
-        .pipe(gulp.dest('./fonts'));
-
-
     // Copy jQuery
     gulp.src(basePaths.node + 'jquery/dist/*.js')
         .pipe(gulp.dest(basePaths.dev + '/js'));
 
-    // _s SCSS files
-    gulp.src(basePaths.node + 'undescores-for-npm/sass/**/*.scss')
-        .pipe(gulp.dest(basePaths.dev + '/sass/underscores'));
-
-    // _s JS files
-    gulp.src(basePaths.node + 'undescores-for-npm/js/*.js')
-        .pipe(gulp.dest(basePaths.dev + '/js'));
-
-    // Copy Tether JS files
-    gulp.src(basePaths.node + 'tether/dist/js/*.js')
-        .pipe(gulp.dest(basePaths.dev + '/js/tether'));
-
-    // Copy Tether CSS files
-    gulp.src(basePaths.node + 'tether/dist/js/*.js')
-        .pipe(gulp.dest(basePaths.dev + '/js/tether'));;
-    
-    gulp.src(basePaths.node + 'bootstrap-layout-scrollable/dist/*.css')
-        .pipe(gulp.dest(basePaths.dev + '/css'));
-    
-    // gulp.src(basePaths.node + 'bootstrap-layout-scrollable/dist/*.js')
-    //     .pipe(gulp.dest(basePaths.dev + '/js/bootstrap-layout-scrollable'));
-
-    gulp.src(basePaths.node + 'bootstrap-layout/dist/*.css')
-        .pipe(gulp.dest(basePaths.dev + '/css'));
-
-    // gulp.src(basePaths.node + 'bootstrap-layout/dist/*.js')
-    //     .pipe(gulp.dest(basePaths.dev + '/js/bootstrap-layout'));
-
-    gulp.src(basePaths.node + 'simplebar/dist/*.css')
-        .pipe(gulp.dest(basePaths.dev + '/css'));
+    gulp.src(basePaths.node + 'materialize-css/sass/**/*.scss')
+        .pipe(gulp.dest(basePaths.dev + '/sass/materialize'));
         
-    gulp.src(basePaths.node + 'simplebar/dist/*.js')
-        .pipe(gulp.dest(basePaths.dev + '/js/simplebar'));
+    gulp.src(basePaths.node + 'materialize-css/js/**/*.js')
+        .pipe(gulp.dest(basePaths.dev + '/js/materialize'));
+
+    // Copy all Roboto Fonts
+    gulp.src(basePaths.node + 'roboto-fontface/fonts/**/*.{ttf,woff,woff2,eof,svg}')
+        .pipe(gulp.dest('./fonts'));
 });
 
 // Run

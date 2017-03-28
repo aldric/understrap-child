@@ -12,7 +12,7 @@ $container = get_theme_mod('understrap_container_type');
 ?>
 
 <?php get_sidebar('footerfull'); ?>
-
+<footer>
 <div class="wrapper" id="wrapper-footer">
 
 	<div class="<?php echo esc_html($container); ?>">
@@ -43,7 +43,7 @@ $container = get_theme_mod('understrap_container_type');
 
 </div><!-- wrapper end -->
 
-
+<footer>
 
 </div><!-- #page -->
 

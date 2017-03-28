@@ -63,30 +63,30 @@ function all_excerpts_get_more_link($post_excerpt)
     'understrap') . '</a></p>';
 }
 
-add_filter('wp_nav_menu', 'add_search_box_to_main_menu', 10, 2);
-function add_search_box_to_main_menu($nav_menu, $args)
-{
-    //echo esc_html($nav_menu);
-    $search_form = '<form class="form-inline" action="'.home_url('/').'" role="search"><input class="form-control" type="text" id="s" name="s" placeholder="Rechercher" style="width:100%"></form>';
-    if ($args->theme_location == 'primary') {
+// add_filter('wp_nav_menu', 'add_search_box_to_main_menu', 10, 2);
+// function add_search_box_to_main_menu($nav_menu, $args)
+// {
+//     //echo esc_html($nav_menu);
+//     $search_form = '<form class="form-inline" action="'.home_url('/').'" role="search"><input class="form-control" type="text" id="s" name="s" placeholder="Rechercher" style="width:100%"></form>';
+//     if ($args->theme_location == 'primary') {
 
 
-           //echo 'plop '.$count;
-          //echo esc_html($nav_menu);
-    }
-    return str_replace('</div>', $search_form.'</div>', $nav_menu, $count);
-}
+//            //echo 'plop '.$count;
+//           //echo esc_html($nav_menu);
+//     }
+//     return str_replace('</div>', $search_form.'</div>', $nav_menu, $count);
+// }
 
-function my_secondary_menu_classes( $classes, $item, $args ) {
-    //print_r($item);
-    if ( 'MainMenuBanks' === $args->menu ) {
-        $classes[] = 'sidebar-menu-item';
-    }
+// function my_secondary_menu_classes( $classes, $item, $args ) {
+//     //print_r($item);
+//     if ( 'MainMenuBanks' === $args->menu ) {
+//         $classes[] = 'sidebar-menu-item';
+//     }
 
-    return $classes;
-}
+//     return $classes;
+// }
 
-add_filter( 'nav_menu_css_class', 'my_secondary_menu_classes', 10, 3 ); 
+// add_filter( 'nav_menu_css_class', 'my_secondary_menu_classes', 10, 3 ); 
 
   register_sidebar(array(
       'name' => 'AGT : Top breadcrumbs',
