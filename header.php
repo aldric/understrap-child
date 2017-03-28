@@ -44,6 +44,17 @@ $base_image = esc_url(home_url('/'))."wp-content/themes/understrap-child/images/
 </head>
 
 <body <?php body_class(); ?>>
+	<div class="fixed-action-btn">
+	 <a class="btn-floating btn-large amber darken-4 go-to-top">
+		 <i class="large material-icons">publish</i>
+	 </a>
+	 <!-- <ul>
+		 <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+		 <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+		 <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+		 <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+	 </ul> -->
+ </div>
 	<div class="navbar-fixed">
 		<nav class="grey lighten-2" role="navigation">
 			<div class="container">
@@ -69,31 +80,38 @@ $base_image = esc_url(home_url('/'))."wp-content/themes/understrap-child/images/
 				<img width="180" src="<?php echo $base_image; ?>topbanque-logo.svg" ="Home" alt="logo" />
 			</a>
 		</li>
-        <li class="search">
-          <div class="search-wrapper card">
-			  <form action="<?php home_url('/') ?>" role="search">
-            		<input id="search" name="s" placeholder="Rechercher" class="validate" style="border:none;transition:none;box-shadow:none"><i class="material-icons">search</i>
-				</form>
-            <div class="search-results"></div>
-          </div>
-        </li>
-		<li><a class="waves-effect waves-light btn" style="margin:0 2px;"><i class="material-icons left">cloud</i>Comparatif des banques</a></li>
-        <!--<li class="bold"><a href="about.html" class="waves-effect waves-orange-hover">À propos</a></li>
-        <li class="bold"><a href="getting-started.html" class="waves-effect waves-orange-hover">Démarrer</a></li>-->
-        <li>
+		<li><div class="separator"></div></li>
+    <li class="search">
+      <div class="search-wrapper card">
+	  <form action="<?php home_url('/') ?>" role="search">
+        		<input id="search" name="s" placeholder="Rechercher" class="validate" style="border:none;transition:none;box-shadow:none"><i class="material-icons">search</i>
+		</form>
+        <div class="search-results"></div>
+      </div>
+    </li>
+		<li><div class="separator"></div></li>
+		<li><a class="amber darken-4 waves-effect waves-light btn" style="margin:0 5px;"><i class="medium material-icons left">search</i>Trouver votre banque</a></li>
+		<li><div class="separator"></div></li>
+		<li>
 		  <ul>
 				<?php wp_nav_menu(
-			array(
-					'menu'            => 'MainMenuBanks',
-					'container'       => '',
-					'menu_class'      => '',
-					'fallback_cb'     => '',
-					'menu_id'         => 'sidebar-menu',
-					'walker'          => new WP_BootstrapSidebar_Navwalker()
-			)
-				); ?>
+            array(
+                    'menu'            => 'MainMenuBanks',
+                    'container'       => '',
+                    'menu_class'      => '',
+                    'fallback_cb'     => '',
+                    'menu_id'         => 'sidebar-menu',
+                    'walker'          => new WP_BootstrapSidebar_Navwalker()
+            )
+                ); ?>
 			</ul>
 		</li>
+		<li><div class="separator"></div></li>
+		<!-- <ul>
+		 <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+ 		 <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+ 		 <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+	 </ul> -->
 </ul>
 		<!-- breadcrumbs widget location -->
 		<?php
@@ -104,4 +122,3 @@ $base_image = esc_url(home_url('/'))."wp-content/themes/understrap-child/images/
   			</div>
 		<?php endif; ?>
 		<!-- end breadcrumbs -->
-

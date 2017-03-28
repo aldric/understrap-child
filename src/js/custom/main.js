@@ -78,38 +78,41 @@ jQuery(document).on('ready', function() {
     else {
         jQuery('div#wrapper-breadcrumbs').hide(0);
     }
-    //showHideGoToTop();
+    showHideGoToTop();
 
     jQuery('.button-collapse').sideNav({
-      menuWidth: 300, // Default is 300
-      edge: 'left', // Choose the horizontal origin
-      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      draggable: false // Choose whether you can drag to open on touch screens
-    }
-  );
+        menuWidth: 300, // Default is 300
+        edge: 'left', // Choose the horizontal origin
+        closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        draggable: false // Choose whether you can drag to open on touch screens
+    });
+
+    var $root = jQuery('html, body');
+    jQuery('a.go-to-top').click(function() {
+        $root.animate({
+            scrollTop: $root.offset().top
+        }, 500);
+        return false;
+    });
+    jQuery('.carousel.carousel-slider').carousel({
+        fullWidth: true
+    });
 
 });
 
+function showHideGoToTop() {
+    if (jQuery(window).scrollTop() < 200) {
+        jQuery('a.go-to-top').hide(150, 'linear');
+    } else {
+        jQuery('a.go-to-top').show(150, 'linear');
+    }
+    if (jQuery(window).scrollTop() < 200) {
+        jQuery('a.go-to-top').hide(150, 'linear');
+    } else {
+        jQuery('a.go-to-top').show(150, 'linear');
+    }
+}
 
-// var $root = jQuery('html, body');
-// jQuery('a#go-to-top').click(function() {
-//     $root.animate({
-//         scrollTop: jQuery("div#content").offset().top
-//     }, 500);
-//     return false;
-// });
-
-// function showHideGoToTop() {
-//     if (jQuery('div#content').offset().top > -200) {
-//         jQuery('a#go-to-top').hide(150, 'linear');
-//     } else {
-//         jQuery('a#go-to-top').show(150, 'linear');
-//     }
-// }
-// jQuery(window).load(function() {
-//     setInterval(
-//     function() {
-//         showHideGoToTop();
-//     }, 1000);
-// });
-
+jQuery(window).on('scroll', debounce(function(e) {
+    showHideGoToTop();
+}, 500));

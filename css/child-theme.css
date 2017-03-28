@@ -7479,7 +7479,7 @@ header {
   padding-left: 0; }
 
 .waves-effect.waves-toppy .waves-ripple {
-  /* The alpha value allows the text and background color 
+  /* The alpha value allows the text and background color
      of the button to still show through. */
   background-color: rgba(241, 54, 0, 0.8); }
 
@@ -7496,3 +7496,12 @@ ul#nav-mobile li.search {
 
 ul.side-nav.fixed li {
   width: 100%; }
+
+nav[role=navigation] {
+  box-shadow: 0 2px 2px 0 rgba(241, 54, 0, 0.5), 0 1px 5px 0 rgba(241, 54, 0, 0.12), 0 3px 1px -2px rgba(241, 54, 0, 0.2); }
+
+div.separator {
+  background-color: rgba(241, 54, 0, 0.5);
+  flex-shrink: 0;
+  height: 1px;
+  margin: 8px 0; }
