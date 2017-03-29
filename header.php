@@ -46,17 +46,8 @@ $base_image = esc_url(home_url('/'))."wp-content/themes/understrap-child/images/
 </head>
 
 <body <?php body_class(); ?>>
-	<div class="fixed-action-btn">
-	 <a class="btn-floating btn-large amber darken-4 go-to-top">
-		 <i class="large material-icons">publish</i>
-	 </a>
-	 <!-- <ul>
-		 <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-		 <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-		 <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-		 <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-	 </ul> -->
- </div>
+
+<header>
 	<div class="navbar-fixed">
 		<nav class="grey lighten-2" role="navigation">
 			<div class="container">
@@ -121,12 +112,8 @@ $base_image = esc_url(home_url('/'))."wp-content/themes/understrap-child/images/
 			</ul>
 		</li>
 		<li><div class="separator"></div></li>
-		<!-- <ul>
-		 <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
- 		 <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
- 		 <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-	 </ul> -->
-</ul>
+	</ul>
+</header>
 		<!-- breadcrumbs widget location -->
 		<?php
         //echo 'plop'. get_page_template_slug();
@@ -136,3 +123,8 @@ $base_image = esc_url(home_url('/'))."wp-content/themes/understrap-child/images/
   			</div>
 		<?php endif; ?>
 		<!-- end breadcrumbs -->
+<div class="fixed-action-btn">
+	 <a class="btn-floating btn-large amber darken-4 go-to-top">
+		 <i class="large material-icons">publish</i>
+	 </a>
+ </div>

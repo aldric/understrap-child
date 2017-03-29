@@ -109,33 +109,6 @@ div.card-ranking {
     }
 }
 
-div.widget-area aside { @extend .mb-2}
-
-div.widget-custom ul {
-    padding-left: 1rem;
-}
-
-div.widget-catalogue li a.active {
-    text-transform: uppercase;
-    color : $link-hover-color;
-    cursor: inherit;
-      &:before {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 600;
-        margin-right: 5px;
-      	content: '\f124';
-      }
-}
-button span.truncate {
-    width: 250px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline-block;
-    color: #2d2d2d;
-}
-
-
 /* Rules for sizing the icon. */
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
@@ -150,20 +123,29 @@ button span.truncate {
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
-// .navbar-light form input[type=text] {
-//     border-bottom: 1px solid $brand-primary;
-// }
+@media only screen and (min-width: 993px) {
+  .container {
+      width: 95%;
+  }
+}
 
    header {
       padding-left: 0;
     }
 
-    // @media only screen and (max-width : 992px) {
-    //    main, footer {
-    //     padding-left: 10px;
-    //   }
-    // }
+    body>header, main, footer {
+        padding-left: 300px;
+    }
+    @media only screen and (max-width : 992px) {
+       body>header, main, footer {
+        padding-left: 0px;
+      }
+    }
 
+body>header a.button-collapse {
+  color:black;
+  padding-left: 0px;
+}
    .waves-effect.waves-toppy .waves-ripple {
      /* The alpha value allows the text and background color
      of the button to still show through. */
@@ -173,11 +155,15 @@ ul#nav-mobile.side-nav.fixed li.logo {
   margin-bottom: 0px;
 }
 
-ul#nav-mobile li.search {
- position: relative;
- top:0;
- margin-bottom: 20px;
+ul#nav-mobile {
+  box-shadow: $brand-blue 1px 0px;
+  li.search {
+    position: relative;
+    top:0;
+    margin-bottom: 20px;
+  }
 }
+
 #logo-container {
   margin-bottom: 0;
 }
@@ -186,10 +172,10 @@ ul.side-nav.fixed li {
 }
 
 nav[role=navigation] {
-  box-shadow: 0 2px 2px 0 rgba(241,54,0,.50), 0 1px 5px 0 rgba(241,54,0,.12), 0 3px 1px -2px rgba(241,54,0,.2);
+  box-shadow: 0 2px 2px 0 rgba($brand-blue,.50), 0 1px 5px 0 rgba($brand-blue,.12), 0 3px 1px -2px rgba(241,54,0,.2);
 }
 div.separator {
-    background-color: rgba(241,54,0,.50);
+    background-color: rgba($brand-blue,.50);
     flex-shrink: 0;
     height: 1px;
     margin: 8px 0;

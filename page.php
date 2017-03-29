@@ -15,7 +15,7 @@ get_header();
 $container   = /*get_theme_mod('understrap_container_type')*/ 'container';
 $sidebar_pos = get_theme_mod('understrap_sidebar_position');
 
-?> 
+?>
 <main>
 		<div class="<?php echo esc_html($container); ?>" id="content" tabindex="-1">
 
@@ -33,7 +33,7 @@ $sidebar_pos = get_theme_mod('understrap_sidebar_position');
 						?>
 
 					<?php endwhile; // end of the loop.?>
-			</div><!-- #primary -->
+			
 			<!-- Do the right sidebar check -->
 			<?php if ('right' === $sidebar_pos || 'both' === $sidebar_pos) : ?>
 

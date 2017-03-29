@@ -1968,7 +1968,7 @@ ul:not(.browser-default) {
     list-style-type: none; }
 
 a {
-  color: #f13600;
+  color: #039be5;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent; }
 
@@ -7427,27 +7427,6 @@ div.card-ranking {
     width: 40%;
     border-bottom: 7px solid #f13600; }
 
-div.widget-custom ul {
-  padding-left: 1rem; }
-
-div.widget-catalogue li a.active {
-  text-transform: uppercase;
-  color: #f13600;
-  cursor: inherit; }
-  div.widget-catalogue li a.active:before {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-    margin-right: 5px;
-    content: '\f124'; }
-
-button span.truncate {
-  width: 250px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: inline-block;
-  color: #2d2d2d; }
-
 /* Rules for sizing the icon. */
 .material-icons.md-18 {
   font-size: 18px; }
@@ -7475,8 +7454,23 @@ button span.truncate {
 .material-icons.md-light.md-inactive {
   color: rgba(255, 255, 255, 0.3); }
 
+@media only screen and (min-width: 993px) {
+  .container {
+    width: 95%; } }
+
 header {
   padding-left: 0; }
+
+body > header, main, footer {
+  padding-left: 300px; }
+
+@media only screen and (max-width: 992px) {
+  body > header, main, footer {
+    padding-left: 0px; } }
+
+body > header a.button-collapse {
+  color: black;
+  padding-left: 0px; }
 
 .waves-effect.waves-toppy .waves-ripple {
   /* The alpha value allows the text and background color
@@ -7486,10 +7480,12 @@ header {
 ul#nav-mobile.side-nav.fixed li.logo {
   margin-bottom: 0px; }
 
-ul#nav-mobile li.search {
-  position: relative;
-  top: 0;
-  margin-bottom: 20px; }
+ul#nav-mobile {
+  box-shadow: #002e6e 1px 0px; }
+  ul#nav-mobile li.search {
+    position: relative;
+    top: 0;
+    margin-bottom: 20px; }
 
 #logo-container {
   margin-bottom: 0; }
@@ -7498,10 +7494,10 @@ ul.side-nav.fixed li {
   width: 100%; }
 
 nav[role=navigation] {
-  box-shadow: 0 2px 2px 0 rgba(241, 54, 0, 0.5), 0 1px 5px 0 rgba(241, 54, 0, 0.12), 0 3px 1px -2px rgba(241, 54, 0, 0.2); }
+  box-shadow: 0 2px 2px 0 rgba(0, 46, 110, 0.5), 0 1px 5px 0 rgba(0, 46, 110, 0.12), 0 3px 1px -2px rgba(241, 54, 0, 0.2); }
 
 div.separator {
-  background-color: rgba(241, 54, 0, 0.5);
+  background-color: rgba(0, 46, 110, 0.5);
   flex-shrink: 0;
   height: 1px;
   margin: 8px 0; }

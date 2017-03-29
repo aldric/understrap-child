@@ -2,6 +2,7 @@
 
 
 include(realpath(dirname(__FILE__))).'/classes/bootstrap-sidebar-wp-navwalker.php';
+include(realpath(dirname(__FILE__))).'/classes/shortcodes.php';
 
 function understrap_remove_scripts()
 {
@@ -86,7 +87,7 @@ function all_excerpts_get_more_link($post_excerpt)
 //     return $classes;
 // }
 
-// add_filter( 'nav_menu_css_class', 'my_secondary_menu_classes', 10, 3 ); 
+// add_filter( 'nav_menu_css_class', 'my_secondary_menu_classes', 10, 3 );
 
   register_sidebar(array(
       'name' => 'AGT : Top breadcrumbs',
