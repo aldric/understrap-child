@@ -18,10 +18,12 @@ $base_image = esc_url(home_url('/'))."wp-content/themes/understrap-child/images/
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#f13600">
 	<meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>">
-	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileColor" content="#f13600">
 	<meta name="msapplication-TileImage" content="<?php echo $base_image; ?>/f/ms-icon-144x144.png">
-	<meta name="theme-color" content="#ffffff">
+	<meta name="msapplication-navbutton-color" content="#f13600">
+	<meta name="theme-color" content="#f13600">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">
@@ -86,6 +88,18 @@ $base_image = esc_url(home_url('/'))."wp-content/themes/understrap-child/images/
 	  <form action="<?php home_url('/') ?>" role="search">
         		<input id="search" name="s" placeholder="Rechercher" class="validate" style="border:none;transition:none;box-shadow:none"><i class="material-icons">search</i>
 		</form>
+		<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "WebSite",
+			"url": "https://www.topbanque.net/",
+			"potentialAction": {
+			"@type": "SearchAction",
+			"target": "https://www.topbanque.net/?s={search_term_string}",
+			"query-input": "required name=search_term_string"
+		}
+		}
+		</script>
         <div class="search-results"></div>
       </div>
     </li>
