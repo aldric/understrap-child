@@ -52,8 +52,15 @@ $base_image = esc_url(home_url('/'))."wp-content/themes/understrap-child/images/
 		<nav class="grey lighten-2" role="navigation">
 			<div class="container">
 				<div class="nav-wrapper">
-					<a id="logo-container" href="#" class="brand-logo center">
-						<img width="160" src="<?php echo $base_image; ?>topbanque-logo.svg" ="Home" alt="logo" style="padding-top: 13px;"/>
+
+					<ul class="right hide-on-med-and-down">
+						 <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+						 <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+						 <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+						 <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+		 	 		</ul>
+					<a id="logo-container" href="#" class="brand-logo right">
+						<img  src="<?php echo $base_image; ?>/f/favicon-32x32.png" ="Home" alt="Topbanque logo"/>
 					</a>
 					<!--<ul class="right hide-on-med-and-down">
 						<li><a href="#">Navbar Link</a></li>
@@ -68,7 +75,7 @@ $base_image = esc_url(home_url('/'))."wp-content/themes/understrap-child/images/
 	</div>
 
 	<ul id="nav-mobile" class="side-nav fixed" style="transform: translateX(0px);">
-        <li class="logo">
+    <li class="logo">
 			<a id="logo-container" href="https://www.topbanque.net/" class="brand-logo">
 				<img width="180" src="<?php echo $base_image; ?>topbanque-logo.svg" ="Home" alt="logo" />
 			</a>
