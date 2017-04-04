@@ -7502,4 +7502,27 @@ div.separator {
   padding-left: 5px; }
 
 div#home-carousel .carousel-item img {
-  width: auto; }
+  max-width: 100%;
+  height: auto; }
+
+div#home-carousel .indicator-item {
+  margin: 4px; }
+
+.carousel-overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  text-align: left;
+  max-height: 110px;
+  overflow: hidden;
+  color: white; }
+  .carousel-overlay h2, .carousel-overlay p {
+    color: white;
+    margin: 0;
+    padding: 0 5px; }
+
+div:focus {
+  outline: none; }

@@ -9,7 +9,7 @@ var BreadcrumbGenerator = function() {
 
     this.populate = function() {
         var idx = 0;
-        jQuery('nav.breadcrumb a.breadcrumb-item').each(function(index) {
+        jQuery('a.breadcrumb').each(function(index) {
             idx = index + 1;
             var text = idx == 1 ? jQuery(this).find("meta").prop("content") : jQuery(this).text();
             text = text.charAt(0).toUpperCase() + text.slice(1);
@@ -19,7 +19,7 @@ var BreadcrumbGenerator = function() {
             );
 
         });
-        jQuery('nav.breadcrumb span.breadcrumb-item.active').each(function(index) {
+        jQuery('span.breadcrumb.active').each(function(index) {
             var text = jQuery(this).find('span[property=name]').text();
             if (text === '')
                 text = jQuery(this).find("meta").prop("content");

@@ -93,8 +93,8 @@ function all_excerpts_get_more_link($post_excerpt)
       'name' => 'AGT : Top breadcrumbs',
       'id' => 'sidebar-top-bank-breadcrumbs',
       'description' => 'to display the breadcrumbs',
-      'before_widget' => '<nav class="breadcrumb">',
-      'after_widget' => '</nav>'//,
+      'before_widget' => '<div>',
+      'after_widget' => '</div>'//,
       //'before_title' => '<h3 class="widget-title">',
       //'after_title' => '</h3>',
   ));

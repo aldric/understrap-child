@@ -50,18 +50,27 @@ $base_image = esc_url(home_url('/'))."wp-content/themes/understrap-child/images/
 <header>
 	<div class="navbar-fixed">
 		<nav class="grey lighten-2" role="navigation">
-			<div class="container">
+			<div>
 				<div class="nav-wrapper">
-
-					<ul class="right hide-on-med-and-down">
+					<a id="logo-container" href="#" class="brand-logo right">
+						<img  src="<?php echo $base_image; ?>/f/favicon-32x32.png" ="Home" alt="Topbanque logo"/>
+					</a>
+					<!-- breadcrumbs widget location -->
+					<?php
+			        //echo 'plop'. get_page_template_slug();
+			        if (is_active_sidebar('sidebar-top-bank-breadcrumbs')) : ?>
+			   			<div class="wrapper wrapper-navbar" id="wrapper-breadcrumbs">
+									<?php dynamic_sidebar('sidebar-top-bank-breadcrumbs'); ?>
+			  			</div>
+					<?php endif; ?>
+					<!-- end breadcrumbs -->
+					<!-- <ul class="right hide-on-med-and-down">
 						 <li><a href="sass.html"><i class="material-icons">search</i></a></li>
 						 <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
 						 <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
 						 <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
-		 	 		</ul>
-					<a id="logo-container" href="#" class="brand-logo right">
-						<img  src="<?php echo $base_image; ?>/f/favicon-32x32.png" ="Home" alt="Topbanque logo"/>
-					</a>
+		 	 		</ul> -->
+
 					<!--<ul class="right hide-on-med-and-down">
 						<li><a href="#">Navbar Link</a></li>
 					</ul>
@@ -83,21 +92,21 @@ $base_image = esc_url(home_url('/'))."wp-content/themes/understrap-child/images/
 		<li><div class="separator"></div></li>
     <li class="search">
       <div class="search-wrapper card">
-	  <form action="<?php home_url('/') ?>" role="search">
-        		<input id="search" name="s" placeholder="Rechercher" class="validate" style="border:none;transition:none;box-shadow:none"><i class="material-icons">search</i>
-		</form>
-		<script type="application/ld+json">
-		{
-			"@context": "http://schema.org",
-			"@type": "WebSite",
-			"url": "https://www.topbanque.net/",
-			"potentialAction": {
-			"@type": "SearchAction",
-			"target": "https://www.topbanque.net/?s={search_term_string}",
-			"query-input": "required name=search_term_string"
-		}
-		}
-		</script>
+				  <form action="<?php home_url('/') ?>" role="search">
+			        		<input id="search" name="s" placeholder="Rechercher" class="validate" style="border:none;transition:none;box-shadow:none"><i class="material-icons">search</i>
+					</form>
+					<script type="application/ld+json">
+					{
+						"@context": "http://schema.org",
+						"@type": "WebSite",
+						"url": "https://www.topbanque.net/",
+						"potentialAction": {
+						"@type": "SearchAction",
+						"target": "https://www.topbanque.net/?s={search_term_string}",
+						"query-input": "required name=search_term_string"
+					}
+					}
+					</script>
         <div class="search-results"></div>
       </div>
     </li>
@@ -121,15 +130,7 @@ $base_image = esc_url(home_url('/'))."wp-content/themes/understrap-child/images/
 		<li><div class="separator"></div></li>
 	</ul>
 </header>
-		<!-- breadcrumbs widget location -->
-		<?php
-        //echo 'plop'. get_page_template_slug();
-        if (is_active_sidebar('sidebar-top-bank-breadcrumbs')) : ?>
-   			<div class="wrapper wrapper-navbar" id="wrapper-breadcrumbs">
-						<?php dynamic_sidebar('sidebar-top-bank-breadcrumbs'); ?>
-  			</div>
-		<?php endif; ?>
-		<!-- end breadcrumbs -->
+
 <div class="fixed-action-btn">
 	 <a class="btn-floating btn-large amber darken-4 go-to-top">
 		 <i class="large material-icons">publish</i>

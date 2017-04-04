@@ -2,8 +2,9 @@
 //[carousel]
 function carousel_func($atts)
 {
+  $image_path = esc_url(home_url('/'))."wp-content/themes/understrap-child/images/";
   $template = file_get_contents(realpath(dirname(__FILE__))."/carousel.html");
-  return $template;
+  return str_replace('$image_path', $image_path, $template);
 }
 
 //[cards wrap="row" small="12" medium="4" large="3"]
