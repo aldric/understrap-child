@@ -1,6 +1,6 @@
 <?php
 
-
+define('__STYLE__', 'materialize');
 include(realpath(dirname(__FILE__))).'/classes/bootstrap-sidebar-wp-navwalker.php';
 include(realpath(dirname(__FILE__))).'/classes/shortcodes.php';
 

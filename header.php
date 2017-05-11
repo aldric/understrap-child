@@ -49,11 +49,11 @@ $base_image = esc_url(home_url('/'))."wp-content/themes/understrap-child/images/
 
 <header>
 	<div class="navbar-fixed">
-		<nav class="grey lighten-2" role="navigation">
+		<nav class="white" role="navigation">
 			<div>
 				<div class="nav-wrapper">
-					<a id="logo-container" href="#" class="brand-logo right">
-						<img  src="<?php echo $base_image; ?>/f/favicon-32x32.png" ="Home" alt="Topbanque logo"/>
+					<a id="logo-container" href="#" class="brand-logo center">
+						<img src="<?php echo $base_image; ?>topbanque-logo.svg" alt="Topbanque logo" style="padding-top: 6px;max-width:200px"/>
 					</a>
 					<!-- breadcrumbs widget location -->
 					<?php
@@ -84,13 +84,10 @@ $base_image = esc_url(home_url('/'))."wp-content/themes/understrap-child/images/
 	</div>
 
 	<ul id="nav-mobile" class="side-nav fixed" style="transform: translateX(0px);">
-    <li class="logo">
-			<a id="logo-container" href="https://www.topbanque.net/" class="brand-logo">
-				<img width="180" src="<?php echo $base_image; ?>topbanque-logo.svg" ="Home" alt="logo" />
-			</a>
+		<li class="logo"><a id="logo-container" href="http://materializecss.com/" class="brand-logo">
+      <object id="front-page-logo" type="image/svg+xml" data="<?php echo $base_image; ?>topbanque-logo.svg">Your browser does not support SVG</object></a>
 		</li>
-		<li><div class="separator"></div></li>
-    <li class="search">
+		<li class="search">
       <div class="search-wrapper card">
 				  <form action="<?php home_url('/') ?>" role="search">
 			        		<input id="search" name="s" placeholder="Rechercher" class="validate" style="border:none;transition:none;box-shadow:none"><i class="material-icons">search</i>

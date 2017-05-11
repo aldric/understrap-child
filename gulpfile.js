@@ -182,12 +182,8 @@ gulp.task('watch-bs', ['browser-sync', 'watch', 'cssnano'], function() {});
 // Uglifies and concat all JS files into one
 gulp.task('scripts', function() {
     var scripts = [
-        basePaths.dev + 'js/tether/tether.js', // Must be loaded before BS4
-        // Start - All BS4 stuff
-        basePaths.dev + 'js/bootstrap4/bootstrap.js',
-        // End - All BS4 stuff
         basePaths.dev + 'js/skip-link-focus-fix.js',
-        
+
         basePaths.dev + 'js/materialize/initial.js',
         basePaths.dev + 'js/materialize/jquery.easing.1.3.js',
         basePaths.dev + 'js/materialize/animation.js',
@@ -220,6 +216,7 @@ gulp.task('scripts', function() {
         basePaths.dev + 'js/materialize/carousel.js',
         basePaths.dev + 'js/materialize/tapTarget.js',
         // Custom script
+        basePaths.dev + 'js/vue/vue.js',
         basePaths.dev + 'js/custom/main.js'
     ];
 
@@ -236,6 +233,7 @@ gulp.task('scripts', function() {
 // Deleting any file inside the /src folder
 gulp.task('clean-source', function() {
     return del([basePaths.dev + 'css/**',
+        basePaths.dev + 'src/js/vue/*',
         basePaths.dev + 'src/js/materialize/*',
         basePaths.dev + 'src/js/jquery/*',
         basePaths.dev + 'src/sass/materialize/*',
@@ -256,13 +254,20 @@ gulp.task('copy-assets', function() {
 
     gulp.src(basePaths.node + 'materialize-css/sass/**/*.scss')
         .pipe(gulp.dest(basePaths.dev + '/sass/materialize'));
-        
+
     gulp.src(basePaths.node + 'materialize-css/js/**/*.js')
         .pipe(gulp.dest(basePaths.dev + '/js/materialize'));
+
+    gulp.src(basePaths.node + 'vue/dist/vue.js')
+        .pipe(gulp.dest(basePaths.dev + '/js/vue'));
 
     // Copy all Roboto Fonts
     gulp.src(basePaths.node + 'roboto-fontface/fonts/**/*.{ttf,woff,woff2,eof,svg}')
         .pipe(gulp.dest('./fonts'));
+
+    // Copy all FA Fonts
+//    gulp.src(basePaths.node + 'roboto-fontface/fonts/**/*.{ttf,woff,woff2,eof,svg}')
+  //      .pipe(gulp.dest('./fonts'));
 });
 
 // Run

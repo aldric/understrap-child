@@ -26,6 +26,7 @@
   "dependencies": {
     "browser-sync": "^2.18.7",
     "del": "^2.2.2",
+    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-clone": "^1.0.0",
     "gulp-concat": "^2.6.1",
@@ -42,6 +43,7 @@
     "materialize-css": "^0.98.1",
     "merge2": "^1.0.3",
     "roboto-fontface": "^0.7.0",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "vue": "^2.3.3"
   }
 }
